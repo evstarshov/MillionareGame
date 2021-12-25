@@ -42,6 +42,9 @@
                                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                             </backgroundConfiguration>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="newGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="szy-yQ-x75"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4K0-Wl-fAP">
                                         <rect key="frame" x="38.5" y="173.5" width="101" height="31"/>
@@ -68,6 +71,11 @@
                             <constraint firstItem="s6q-gZ-CAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="grQ-2Y-Bha"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="mpe-pC-xMB" id="KjK-Mu-MhA"/>
+                        <outlet property="newGameButton" destination="2D2-KW-gNy" id="flD-em-wHJ"/>
+                        <outlet property="resultsButton" destination="4K0-Wl-fAP" id="yg0-in-kIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
