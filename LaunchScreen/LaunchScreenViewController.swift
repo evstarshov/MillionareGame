@@ -37,6 +37,10 @@ class LaunchScreenViewController: UIViewController {
     @IBAction func newGame(_ sender: Any) {
         if isValid() == false {
             print("game started")
+            let userDefaults = UserDefaults()
+            let player = nameTextField.text
+            let vc = GameViewController()
+            self.present(vc, animated: true)
         } else {
             showAlertNameEmpty()
         }

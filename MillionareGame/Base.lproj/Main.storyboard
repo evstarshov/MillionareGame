@@ -81,9 +81,100 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
+        <!--Game View Controller-->
+        <scene sceneID="x6K-Lk-Gat">
+            <objects>
+                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9xa-bJ-xIW" customClass="GameViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="thZ-Hb-JNM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="322_c144e2880b" translatesAutoresizingMaskIntoConstraints="NO" id="6Px-AU-k8g">
+                                <rect key="frame" x="20" y="44" width="374" height="251"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вопрос" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbO-JW-Wee">
+                                <rect key="frame" x="20" y="300" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mIP-Y7-2jk">
+                                <rect key="frame" x="0.0" y="333" width="414" height="110"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="xFG-1M-ESg">
+                                        <rect key="frame" x="20" y="20" width="76" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-vr-ZmR">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Ответ 1">
+                                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ3-Z0-bho">
+                                                <rect key="frame" x="0.0" y="39" width="76" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Ответ 3">
+                                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kjE-9v-OGe">
+                                        <rect key="frame" x="329" y="20" width="76.5" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yr-cu-ix8">
+                                                <rect key="frame" x="0.0" y="0.0" width="76.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Ответ 2">
+                                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-5M-Xqu">
+                                                <rect key="frame" x="0.0" y="39" width="76.5" height="31"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Ответ 4">
+                                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                                    <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XtX-Z0-n8L"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="wbO-JW-Wee" firstAttribute="leading" secondItem="XtX-Z0-n8L" secondAttribute="leading" constant="20" id="7fm-FW-wxv"/>
+                            <constraint firstItem="XtX-Z0-n8L" firstAttribute="trailing" secondItem="6Px-AU-k8g" secondAttribute="trailing" constant="20" id="8A7-j3-ZOJ"/>
+                            <constraint firstItem="wbO-JW-Wee" firstAttribute="top" secondItem="6Px-AU-k8g" secondAttribute="bottom" constant="5" id="EL7-sA-6F4"/>
+                            <constraint firstItem="6Px-AU-k8g" firstAttribute="top" secondItem="XtX-Z0-n8L" secondAttribute="top" id="SLc-D1-L2i"/>
+                            <constraint firstItem="6Px-AU-k8g" firstAttribute="centerX" secondItem="thZ-Hb-JNM" secondAttribute="centerX" id="VPC-tu-ndH"/>
+                            <constraint firstItem="mIP-Y7-2jk" firstAttribute="top" secondItem="6Px-AU-k8g" secondAttribute="bottom" constant="38" id="Xzi-1p-9Fb"/>
+                            <constraint firstItem="mIP-Y7-2jk" firstAttribute="centerX" secondItem="thZ-Hb-JNM" secondAttribute="centerX" id="YyT-bx-a9b"/>
+                            <constraint firstItem="mIP-Y7-2jk" firstAttribute="centerX" secondItem="wbO-JW-Wee" secondAttribute="centerX" id="bsX-F6-oFh"/>
+                            <constraint firstItem="6Px-AU-k8g" firstAttribute="leading" secondItem="XtX-Z0-n8L" secondAttribute="leading" constant="20" id="g27-og-3Cl"/>
+                            <constraint firstItem="mIP-Y7-2jk" firstAttribute="leading" secondItem="thZ-Hb-JNM" secondAttribute="leading" id="jxM-00-k6h"/>
+                            <constraint firstItem="XtX-Z0-n8L" firstAttribute="bottom" secondItem="mIP-Y7-2jk" secondAttribute="bottom" constant="419" id="tZd-H2-Rdg"/>
+                            <constraint firstItem="XtX-Z0-n8L" firstAttribute="trailing" secondItem="wbO-JW-Wee" secondAttribute="trailing" constant="20" id="xg0-bb-KyF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4O-Ex-OhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="83.705357142857139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="322_c144e2880b" width="564" height="251"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

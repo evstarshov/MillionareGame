@@ -17,6 +17,9 @@
 		3AE66D372777458F00EB29B9 /* MillionareGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D362777458F00EB29B9 /* MillionareGameUITests.swift */; };
 		3AE66D392777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D382777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift */; };
 		3AE66D472777464100EB29B9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */; };
+		3AE66D4A2777572D00EB29B9 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D492777572D00EB29B9 /* GameViewController.swift */; };
+		3AE66D4D27776B2E00EB29B9 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D4C27776B2E00EB29B9 /* Question.swift */; };
+		3AE66D4F277770B200EB29B9 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D4E277770B200EB29B9 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		3AE66D362777458F00EB29B9 /* MillionareGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareGameUITests.swift; sourceTree = "<group>"; };
 		3AE66D382777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		3AE66D492777572D00EB29B9 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3AE66D4C27776B2E00EB29B9 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		3AE66D4E277770B200EB29B9 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,8 @@
 		3AE66D092777458E00EB29B9 = {
 			isa = PBXGroup;
 			children = (
+				3AE66D4B27776B1200EB29B9 /* Resourses */,
+				3AE66D482777571200EB29B9 /* GameScreen */,
 				3AE66D452777460B00EB29B9 /* LaunchScreen */,
 				3AE66D142777458E00EB29B9 /* MillionareGame */,
 				3AE66D2B2777458F00EB29B9 /* MillionareGameTests */,
@@ -136,6 +144,23 @@
 				3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */,
 			);
 			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		3AE66D482777571200EB29B9 /* GameScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AE66D492777572D00EB29B9 /* GameViewController.swift */,
+			);
+			path = GameScreen;
+			sourceTree = "<group>";
+		};
+		3AE66D4B27776B1200EB29B9 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				3AE66D4C27776B2E00EB29B9 /* Question.swift */,
+				3AE66D4E277770B200EB29B9 /* Player.swift */,
+			);
+			path = Resourses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,8 +294,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AE66D4A2777572D00EB29B9 /* GameViewController.swift in Sources */,
 				3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */,
 				3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */,
+				3AE66D4D27776B2E00EB29B9 /* Question.swift in Sources */,
+				3AE66D4F277770B200EB29B9 /* Player.swift in Sources */,
 				3AE66D472777464100EB29B9 /* LaunchScreenViewController.swift in Sources */,
 				3AE66D182777458E00EB29B9 /* SceneDelegate.swift in Sources */,
 			);
