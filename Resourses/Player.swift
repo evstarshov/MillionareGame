@@ -8,6 +8,15 @@
 import Foundation
 
 final class Player {
+    let name: String
+    var count = 0
+    
+    init(name: String) {
+    self.name = name
+    }
+}
+
+final class PlayerSettings {
     
     private enum Keys: String {
         case playerName
