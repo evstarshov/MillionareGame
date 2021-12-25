@@ -84,7 +84,7 @@
         <!--Game View Controller-->
         <scene sceneID="x6K-Lk-Gat">
             <objects>
-                <viewController storyboardIdentifier="GameViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9xa-bJ-xIW" customClass="GameViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewControllerID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9xa-bJ-xIW" customClass="GameViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="thZ-Hb-JNM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
