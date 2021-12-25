@@ -38,11 +38,11 @@ class LaunchScreenViewController: UIViewController {
         if isValid() == false {
             print("game started")
         } else {
-            showAlert()
+            showAlertNameEmpty()
         }
     }
     
-    private func showAlert() {
+    private func showAlertNameEmpty() {
             let alertController = UIAlertController(
                 title: "Ошибка",
                 message: "Имя не может быть пустым",
@@ -59,9 +59,29 @@ class LaunchScreenViewController: UIViewController {
                     completion: nil)
         }
     
+    private func showAlertNameTooLarge() {
+            let alertController = UIAlertController(
+                title: "Ошибка",
+                message: "Имя слишком длинное",
+                preferredStyle: .alert)
+            let alertItem = UIAlertAction(
+                title: "Ok:(",
+                style: .cancel)
+            { _ in
+                self.nameTextField.text = ""
+            }
+            alertController.addAction(alertItem)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+        }
+    
     private func isValid() -> Bool {
         if nameTextField.text == ""
              {
+            return true
+        } else if nameTextField.text?.count ?? 0 > 10 {
+            showAlertNameTooLarge()
             return true
         } else {
             return false
