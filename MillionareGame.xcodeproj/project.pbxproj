@@ -16,6 +16,7 @@
 		3AE66D2D2777458F00EB29B9 /* MillionareGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D2C2777458F00EB29B9 /* MillionareGameTests.swift */; };
 		3AE66D372777458F00EB29B9 /* MillionareGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D362777458F00EB29B9 /* MillionareGameUITests.swift */; };
 		3AE66D392777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D382777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift */; };
+		3AE66D472777464100EB29B9 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		3AE66D322777458F00EB29B9 /* MillionareGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MillionareGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE66D362777458F00EB29B9 /* MillionareGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareGameUITests.swift; sourceTree = "<group>"; };
 		3AE66D382777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MillionareGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 		3AE66D092777458E00EB29B9 = {
 			isa = PBXGroup;
 			children = (
+				3AE66D452777460B00EB29B9 /* LaunchScreen */,
 				3AE66D142777458E00EB29B9 /* MillionareGame */,
 				3AE66D2B2777458F00EB29B9 /* MillionareGameTests */,
 				3AE66D352777458F00EB29B9 /* MillionareGameUITests */,
@@ -125,6 +128,14 @@
 				3AE66D382777458F00EB29B9 /* MillionareGameUITestsLaunchTests.swift */,
 			);
 			path = MillionareGameUITests;
+			sourceTree = "<group>";
+		};
+		3AE66D452777460B00EB29B9 /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				3AE66D462777464100EB29B9 /* LaunchScreenViewController.swift */,
+			);
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				3AE66D1A2777458E00EB29B9 /* ViewController.swift in Sources */,
 				3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */,
+				3AE66D472777464100EB29B9 /* LaunchScreenViewController.swift in Sources */,
 				3AE66D182777458E00EB29B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
