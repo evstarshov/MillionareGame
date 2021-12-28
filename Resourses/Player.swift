@@ -7,14 +7,16 @@
 
 import Foundation
 
-final class Player {
-    let name: String
-    var count = 0
-    
-    init(name: String) {
-    self.name = name
+
+class Player {
+    static let shared = Player()
+    var name: String?
+    var score: Int?
+    private init() {
+        
     }
 }
+
 
 final class PlayerSettings {
     
@@ -45,14 +47,14 @@ final class PlayerSettings {
             return UserDefaults.standard.integer(forKey: Keys.score.rawValue)
         }
         set {
-        let defaults = UserDefaults.standard
-        let key = Keys.score.rawValue
-        if let score = newValue {
-            print("Score was set to \(score) with key \(key)")
-            defaults.set(score, forKey: key)
-        } else {
-            defaults.removeObject(forKey: key)
+            let defaults = UserDefaults.standard
+            let key = Keys.score.rawValue
+            if let score = newValue {
+                print("Score was set to \(score) with key \(key)")
+                defaults.set(score, forKey: key)
+            } else {
+                defaults.removeObject(forKey: key)
+            }
         }
     }
-}
 }
