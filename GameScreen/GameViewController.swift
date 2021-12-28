@@ -27,11 +27,11 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         questions = [
         Question(question: "Из какого фильма Прекрасный принц?", answers: ["Золушка","Русалочка","Спящая Красавица","Мулан"], correctAnswer: 1),
-        Question(question: "Из какой страны родом Джастин Бибер?", answers: ["Канада","США","Франция","Англия"], correctAnswer: 1),
-        Question(question: "В сиквеле какого праздничного фильма снялся Дональд Трамп?", answers: ["Один Дома","Один дома 2","Ричи Рич","Маленькие негодяи"], correctAnswer: 2),
-        Question(question: "Какой герой мультфильма живет в ананасе под водой?", answers: ["Камбала","Немо","Рик и Морти","Губка Боб"], correctAnswer: 4),
-        Question(question: "Что является национальным животным Шотландии?", answers: ["Лошадь","Единорог","Волк","Корова"], correctAnswer: 2),
-        Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
+//        Question(question: "Из какой страны родом Джастин Бибер?", answers: ["Канада","США","Франция","Англия"], correctAnswer: 1),
+//        Question(question: "В сиквеле какого праздничного фильма снялся Дональд Трамп?", answers: ["Один Дома","Один дома 2","Ричи Рич","Маленькие негодяи"], correctAnswer: 2),
+//        Question(question: "Какой герой мультфильма живет в ананасе под водой?", answers: ["Камбала","Немо","Рик и Морти","Губка Боб"], correctAnswer: 4),
+//        Question(question: "Что является национальным животным Шотландии?", answers: ["Лошадь","Единорог","Волк","Корова"], correctAnswer: 2),
+//        Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
         ]
         pickQuestion()
     }
@@ -94,6 +94,7 @@ class GameViewController: UIViewController {
             questions.remove(at: pickedQuestionIndex)
             answeredQuestions += 1
             print("Answered qustions = \(answeredQuestions)")
+            gameFinal()
             pickQuestion()
             return true
         } else {
@@ -105,4 +106,10 @@ class GameViewController: UIViewController {
         }
     }
     
+    private func gameFinal() {
+        guard questions.count == 0 else { return }
+        PlayerSettings.score = answeredQuestions
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameFinalID") as! GameFinalViewController
+        self.present(vc, animated: true)
+    }
 }
