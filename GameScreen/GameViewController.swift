@@ -95,7 +95,9 @@ class GameViewController: UIViewController {
             pickQuestion()
             return true
         } else {
-            print("Game over")
+            print("Game over by player \(PlayerSettings.playerName ?? "")")
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameOverID") as! GameOverViewController
+            self.present(vc, animated: true)
             return false
         }
     }

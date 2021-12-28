@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CC8277B321A007C04AF /* GameOverViewController.swift */; };
 		3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D152777458E00EB29B9 /* AppDelegate.swift */; };
 		3AE66D182777458E00EB29B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D172777458E00EB29B9 /* SceneDelegate.swift */; };
 		3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D192777458E00EB29B9 /* appUtility.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A354CC8277B321A007C04AF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		3AE66D122777458E00EB29B9 /* MillionareGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillionareGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE66D152777458E00EB29B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE66D172777458E00EB29B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				3AE66D492777572D00EB29B9 /* GameViewController.swift */,
+				3A354CC8277B321A007C04AF /* GameOverViewController.swift */,
 			);
 			path = GameScreen;
 			sourceTree = "<group>";
@@ -298,6 +301,7 @@
 				3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */,
 				3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */,
 				3AE66D4D27776B2E00EB29B9 /* Question.swift in Sources */,
+				3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */,
 				3AE66D4F277770B200EB29B9 /* Player.swift in Sources */,
 				3AE66D472777464100EB29B9 /* LaunchScreenViewController.swift in Sources */,
 				3AE66D182777458E00EB29B9 /* SceneDelegate.swift in Sources */,
