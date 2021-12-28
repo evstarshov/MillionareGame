@@ -46,7 +46,7 @@ final class PlayerSettings {
         }
         set {
         let defaults = UserDefaults.standard
-        let key = Keys.playerName.rawValue
+        let key = Keys.score.rawValue
         if let score = newValue {
             print("Score was set to \(score) with key \(key)")
             defaults.set(score, forKey: key)

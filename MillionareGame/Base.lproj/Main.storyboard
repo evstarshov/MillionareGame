@@ -246,6 +246,7 @@
                     </view>
                     <connections>
                         <outlet property="returnToBeginBTN" destination="pCJ-Nb-PMz" id="D9C-tf-ffp"/>
+                        <outlet property="scoreLabel" destination="Z7e-iI-Df0" id="O3b-ih-ZDb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
