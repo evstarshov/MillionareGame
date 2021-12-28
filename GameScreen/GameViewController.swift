@@ -19,6 +19,8 @@ class GameViewController: UIViewController {
     var questionNumber = Int()
     var answerNumber = Int()
     var answeredQuestions: Int = 0
+    var pickedQuestion = Question()
+    var pickedQuestionIndex: Int = 0
     
     
     override func viewDidLoad() {
@@ -36,12 +38,15 @@ class GameViewController: UIViewController {
 
     
     private func pickQuestion() {
-        let pickQuestion = questions.randomElement()
-        let answer1 = pickQuestion?.answers[0]
-        let answer2 = pickQuestion?.answers[1]
-        let answer3 = pickQuestion?.answers[2]
-        let answer4 = pickQuestion?.answers[3]
-        questionLabel.text = pickQuestion?.question
+        
+        if let index = questions.indices.randomElement() {
+        
+        let pickQuestion = questions[index]
+        let answer1 = pickQuestion.answers[0]
+        let answer2 = pickQuestion.answers[1]
+        let answer3 = pickQuestion.answers[2]
+        let answer4 = pickQuestion.answers[3]
+        questionLabel.text = pickQuestion.question
         answer1Button.setTitle(answer1, for: .normal)
         answer2Button.setTitle(answer2, for: .normal)
         answer3Button.setTitle(answer3, for: .normal)
@@ -50,30 +55,49 @@ class GameViewController: UIViewController {
         answer2Button.backgroundColor = .systemGray
         answer3Button.backgroundColor = .systemGray
         answer4Button.backgroundColor = .systemGray
+        pickedQuestion = pickQuestion
+        pickedQuestionIndex = index
+        }
     }
     
     @IBAction func answer1Tapped() {
         print("Answer 1 tapped")
         answer1Button.backgroundColor = .green
         answerNumber = 1
+        isAnswerCorrect()
     }
     
     @IBAction func answer2Tapped() {
         print("Answer 2 tapped")
         answer2Button.backgroundColor = .green
         answerNumber = 2
+        isAnswerCorrect()
     }
     
     @IBAction func answer3Tapped() {
         print("Answer 3 tapped")
         answer3Button.backgroundColor = .green
         answerNumber = 3
+        isAnswerCorrect()
     }
     
     @IBAction func answer4Tapped() {
         print("Answer 4 tapped")
         answer4Button.backgroundColor = .green
         answerNumber = 4
+        isAnswerCorrect()
+    }
+    
+    private func isAnswerCorrect() -> Bool {
+        if pickedQuestion.correctAnswer == answerNumber {
+            print("Correct!")
+            questions.remove(at: pickedQuestionIndex)
+            pickQuestion()
+            return true
+        } else {
+            print("Game over")
+            return false
+        }
     }
     
 }
