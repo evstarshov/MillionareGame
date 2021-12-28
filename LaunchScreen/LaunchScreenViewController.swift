@@ -40,6 +40,7 @@ class LaunchScreenViewController: UIViewController {
             Player.shared.name = name
             print("game started by player \(Player.shared.name ?? "")")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewControllerID") as! GameViewController
+            vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         } else {
             showAlertNameEmpty()
