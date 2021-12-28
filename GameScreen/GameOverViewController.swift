@@ -9,6 +9,7 @@ import UIKit
 
 class GameOverViewController: UIViewController {
     
+    @IBOutlet weak var gameOverLabel: UILabel!
     @IBOutlet weak var returnToBeginBTN: NSLayoutConstraint!
     @IBOutlet weak var scoreLabel: UILabel!
     
@@ -27,6 +28,7 @@ class GameOverViewController: UIViewController {
     private func setScore() {
         print("Setting score for player \(PlayerSettings.playerName)")
         scoreLabel.text = String(PlayerSettings.score)
+        gameOverLabel.text = "ИГРА ОКОНЧЕНА, \(String(describing: PlayerSettings.playerName ?? ""))"
     }
 
 
