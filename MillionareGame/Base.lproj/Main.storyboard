@@ -201,6 +201,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="toLaunchScreen" destination="8ZF-n3-0hb" eventType="touchUpInside" id="ci9-Pl-D5N"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Aw-6mC">
                                         <rect key="frame" x="46.5" y="29" width="281" height="20.5"/>
@@ -241,6 +244,9 @@
                             <constraint firstItem="o03-kf-JOZ" firstAttribute="top" secondItem="RDa-GN-TM3" secondAttribute="top" constant="265" id="wah-L7-5xJ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="returnToBeginBTN" destination="pCJ-Nb-PMz" id="D9C-tf-ffp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
