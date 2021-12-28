@@ -31,11 +31,21 @@ class GameViewController: UIViewController {
         Question(question: "Что является национальным животным Шотландии?", answers: ["Лошадь","Единорог","Волк","Корова"], correctAnswer: 2),
         Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
         ]
+        pickQuestion()
     }
 
     
-    private func pickQuestion(model: Question) {
-        questionLabel.text = questions.randomElement()?.question
+    private func pickQuestion() {
+        let pickQuestion = questions.randomElement()
+        let answer1 = pickQuestion?.answers[0]
+        let answer2 = pickQuestion?.answers[1]
+        let answer3 = pickQuestion?.answers[2]
+        let answer4 = pickQuestion?.answers[3]
+        questionLabel.text = pickQuestion?.question
+        answer1Button.setTitle(answer1, for: .normal)
+        answer2Button.setTitle(answer2, for: .normal)
+        answer3Button.setTitle(answer3, for: .normal)
+        answer4Button.setTitle(answer4, for: .normal)
     }
     
 }
