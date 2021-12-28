@@ -8,6 +8,7 @@
 import UIKit
 
 class GameFinalViewController: UIViewController {
+    @IBOutlet weak var congratsNameLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var toLaunchScreenBTN: UIButton!
     @IBOutlet weak var scoreTableBtn: UIButton!
@@ -20,6 +21,7 @@ class GameFinalViewController: UIViewController {
     private func configureScore() {
         print("Score for player \(PlayerSettings.playerName ?? "error")")
         scoreLabel.text = String(PlayerSettings.score)
+        congratsNameLabel.text = "Поздравляем, \(String(describing: PlayerSettings.playerName ?? "Вас"))!"
     }
     
     @IBAction func goToLaunchScreen() {
