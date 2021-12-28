@@ -19,9 +19,9 @@ class GameFinalViewController: UIViewController {
     }
     
     private func configureScore() {
-        print("Score for player \(PlayerSettings.playerName ?? "error")")
-        scoreLabel.text = String(PlayerSettings.score)
-        congratsNameLabel.text = "Поздравляем, \(String(describing: PlayerSettings.playerName ?? "Вас"))!"
+        print("Score for player \(Player.shared.name ?? "error")")
+        scoreLabel.text = String(Player.shared.score ?? 0)
+        congratsNameLabel.text = "Поздравляем, \(String(describing: Player.shared.name ?? "Вас"))!"
     }
     
     @IBAction func goToLaunchScreen() {

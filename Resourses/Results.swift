@@ -49,12 +49,12 @@ class GameCaretaker {
     private let decoder = JSONDecoder()
     private let encoder = JSONEncoder()
     private let key = "game"
-    
+
     func saveGame(_ game: Game) throws {
         let data: Memento = try encoder.encode(game)
         UserDefaults.standard.set(data, forKey: key)
     }
-    
+
     func loadGame() throws -> Game {
         guard let data = UserDefaults.standard.value(forKey: key) as? Memento
             , let game = try? decoder.decode(Game.self, from: data) else {
@@ -62,7 +62,7 @@ class GameCaretaker {
         }
         return game
     }
-    
+
     public enum Error: Swift.Error {
         case gameNotFound
     }

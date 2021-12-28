@@ -26,9 +26,9 @@ class GameOverViewController: UIViewController {
     }
     
     private func setScore() {
-        print("Setting score for player \(PlayerSettings.playerName)")
-        scoreLabel.text = String(PlayerSettings.score)
-        gameOverLabel.text = "ИГРА ОКОНЧЕНА, \(String(describing: PlayerSettings.playerName ?? ""))"
+        print("Setting score for player \(String(describing: Player.shared.name ?? "error"))")
+        scoreLabel.text = String(Player.shared.score ?? 0)
+        gameOverLabel.text = "ИГРА ОКОНЧЕНА, \(String(describing: Player.shared.name ?? ""))"
     }
 
 

@@ -98,8 +98,10 @@ class GameViewController: UIViewController {
             pickQuestion()
             return true
         } else {
-            print("Game over by player \(PlayerSettings.playerName ?? "")")
-            PlayerSettings.score = answeredQuestions
+            print("Game over by player \(Player.shared.name ?? "")")
+            Player.shared.score = answeredQuestions
+            let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+            Game.shared.addRecord(record)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameOverID") as! GameOverViewController
             self.present(vc, animated: true)
             return false
@@ -108,7 +110,9 @@ class GameViewController: UIViewController {
     
     private func gameFinal() {
         guard questions.count == 0 else { return }
-        PlayerSettings.score = answeredQuestions
+        Player.shared.score = answeredQuestions
+        let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+        Game.shared.addRecord(record)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameFinalID") as! GameFinalViewController
         self.present(vc, animated: true)
     }

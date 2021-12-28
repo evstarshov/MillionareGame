@@ -37,8 +37,8 @@ class LaunchScreenViewController: UIViewController {
     @IBAction func newGame(_ sender: Any) {
         if isValid() == false {
             let name = nameTextField.text
-            PlayerSettings.playerName = name
-            print("game started by player \(PlayerSettings.playerName ?? "")")
+            Player.shared.name = name
+            print("game started by player \(Player.shared.name ?? "")")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewControllerID") as! GameViewController
             self.present(vc, animated: true)
         } else {
