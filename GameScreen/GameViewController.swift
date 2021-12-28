@@ -46,6 +46,34 @@ class GameViewController: UIViewController {
         answer2Button.setTitle(answer2, for: .normal)
         answer3Button.setTitle(answer3, for: .normal)
         answer4Button.setTitle(answer4, for: .normal)
+        answer1Button.backgroundColor = .systemGray
+        answer2Button.backgroundColor = .systemGray
+        answer3Button.backgroundColor = .systemGray
+        answer4Button.backgroundColor = .systemGray
+    }
+    
+    @IBAction func answer1Tapped() {
+        print("Answer 1 tapped")
+        answer1Button.backgroundColor = .green
+        answerNumber = 1
+    }
+    
+    @IBAction func answer2Tapped() {
+        print("Answer 2 tapped")
+        answer2Button.backgroundColor = .green
+        answerNumber = 2
+    }
+    
+    @IBAction func answer3Tapped() {
+        print("Answer 3 tapped")
+        answer3Button.backgroundColor = .green
+        answerNumber = 3
+    }
+    
+    @IBAction func answer4Tapped() {
+        print("Answer 4 tapped")
+        answer4Button.backgroundColor = .green
+        answerNumber = 4
     }
     
 }

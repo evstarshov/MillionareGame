@@ -103,12 +103,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0yr-cu-ix8">
-                                        <rect key="frame" x="198" y="0.0" width="190" height="31"/>
+                                        <rect key="frame" x="198" y="0.0" width="182" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 2">
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answer2Tapped" destination="9xa-bJ-xIW" eventType="touchUpInside" id="I2f-9k-Qec"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJ3-Z0-bho">
                                         <rect key="frame" x="0.0" y="40" width="190" height="31"/>
@@ -116,15 +120,23 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 3">
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answer3Tapped" destination="9xa-bJ-xIW" eventType="touchUpInside" id="MAq-2U-2ne"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ia5-5M-Xqu">
-                                        <rect key="frame" x="198" y="39" width="190" height="31"/>
+                                        <rect key="frame" x="198" y="39" width="182" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 4">
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answer4Tapped" destination="9xa-bJ-xIW" eventType="touchUpInside" id="Zjd-dL-3Eh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-vr-ZmR">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="31"/>
@@ -132,7 +144,11 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 1">
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="answer1Tapped" destination="9xa-bJ-xIW" eventType="touchUpInside" id="Sm8-Aw-DqT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
