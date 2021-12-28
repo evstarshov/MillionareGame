@@ -92,6 +92,8 @@ class GameViewController: UIViewController {
         if pickedQuestion.correctAnswer == answerNumber {
             print("Correct!")
             questions.remove(at: pickedQuestionIndex)
+            answeredQuestions += 1
+            print("Answered qustions = \(answeredQuestions)")
             pickQuestion()
             return true
         } else {

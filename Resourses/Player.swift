@@ -20,7 +20,7 @@ final class PlayerSettings {
     
     private enum Keys: String {
         case playerName
-        
+        case score
     }
     
     static var playerName: String! {
@@ -40,4 +40,19 @@ final class PlayerSettings {
         }
     }
     
+    static var score: Int! {
+        get{
+            return UserDefaults.standard.integer(forKey: Keys.score.rawValue)
+        }
+        set {
+        let defaults = UserDefaults.standard
+        let key = Keys.playerName.rawValue
+        if let score = newValue {
+            print("Score was set to \(score) with key \(key)")
+            defaults.set(score, forKey: key)
+        } else {
+            defaults.removeObject(forKey: key)
+        }
+    }
+}
 }
