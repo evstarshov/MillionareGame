@@ -180,7 +180,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4O-Ex-OhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957.97101449275374" y="83.705357142857139"/>
+            <point key="canvasLocation" x="2081" y="84"/>
         </scene>
         <!--Game Final View Controller-->
         <scene sceneID="DNx-MK-snV">
@@ -240,6 +240,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Результаты">
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToScoreTable" destination="Org-7I-zcb" eventType="touchUpInside" id="Xla-j9-poy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jtk-lF-cCN"/>
@@ -270,12 +273,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dW-G6-zHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1869.5652173913045" y="-143.30357142857142"/>
+            <point key="canvasLocation" x="2951" y="-748"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Game Results Table View Controller-->
         <scene sceneID="g1U-vK-3oD">
             <objects>
-                <tableViewController storyboardIdentifier="GameResultsID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1kl-do-4kA" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="GameResultsID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="1kl-do-4kA" customClass="GameResultsTableViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="epc-tb-iia">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -283,36 +286,12 @@
                         <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bqa-tU-za7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recordCell" id="bqa-tU-za7">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bqa-tU-za7" id="bdR-gb-5AD">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Игрок" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEU-r1-afr">
-                                            <rect key="frame" x="20" y="11" width="49" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemOrangeColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el6-bV-ZLQ">
-                                            <rect key="frame" x="352" y="11" width="11" height="21.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" systemColor="systemOrangeColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="el6-bV-ZLQ" secondAttribute="bottom" id="7Ai-sf-3bA"/>
-                                        <constraint firstItem="el6-bV-ZLQ" firstAttribute="leading" secondItem="MEU-r1-afr" secondAttribute="trailing" constant="283" id="8Zl-iE-2f6"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="el6-bV-ZLQ" secondAttribute="trailing" constant="31" id="kqQ-jy-Iee"/>
-                                        <constraint firstItem="MEU-r1-afr" firstAttribute="top" secondItem="bdR-gb-5AD" secondAttribute="topMargin" id="seb-eV-9sa"/>
-                                        <constraint firstItem="MEU-r1-afr" firstAttribute="leading" secondItem="bdR-gb-5AD" secondAttribute="leadingMargin" id="t9R-yc-JBf"/>
-                                        <constraint firstItem="el6-bV-ZLQ" firstAttribute="top" secondItem="bdR-gb-5AD" secondAttribute="topMargin" id="ydZ-Zl-YB6"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="MEU-r1-afr" secondAttribute="bottom" id="zcQ-Id-MeA"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -359,6 +338,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Результаты">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToScoreTable" destination="8ZF-n3-0hb" eventType="touchUpInside" id="Yjq-5g-ajU"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Aw-6mC">
                                         <rect key="frame" x="46.5" y="29" width="281" height="20.5"/>
@@ -410,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871.0144927536232" y="698.4375"/>
+            <point key="canvasLocation" x="2951" y="893"/>
         </scene>
     </scenes>
     <resources>

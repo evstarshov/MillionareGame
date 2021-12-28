@@ -13,10 +13,14 @@ class GameResultsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        makeCells()
     }
 
     // MARK: - Table view data source
     
+    private func makeCells() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "recordCell")
+    }
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -24,11 +28,11 @@ class GameResultsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath)
                 let record = Game.shared.records[indexPath.row]
         cell.textLabel?.text = record.playerName
         cell.detailTextLabel?.text = "\(record.playerScore)"
-                return cell
+        return cell
     }
 
 }

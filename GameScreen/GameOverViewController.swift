@@ -22,7 +22,15 @@ class GameOverViewController: UIViewController {
     @IBAction func toLaunchScreen() {
         print("Returning to launch screen")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchScreen") as! LaunchScreenViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
+    }
+    
+    @IBAction func goToScoreTable() {
+        print("Openning score table")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameResultsID") as! GameResultsTableViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     private func setScore() {
