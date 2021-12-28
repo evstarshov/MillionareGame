@@ -178,6 +178,74 @@
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="83.705357142857139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="PH8-ZC-ocH">
+            <objects>
+                <viewController storyboardIdentifier="GameOverID" id="8ZF-n3-0hb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dyr-Mo-Tmq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o03-kf-JOZ">
+                                <rect key="frame" x="20" y="309" width="374" height="278"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРА ОКОНЧЕНА" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-wP-Yp0">
+                                        <rect key="frame" x="113.5" y="0.0" width="147.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJr-Pr-81b">
+                                        <rect key="frame" x="108.5" y="58" width="157" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Aw-6mC">
+                                        <rect key="frame" x="46.5" y="29" width="281" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отвечено вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-Ke-BbZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-iI-Df0">
+                                                <rect key="frame" x="269.5" y="0.0" width="11.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                                <color key="highlightedColor" systemColor="systemOrangeColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstItem="XkM-wP-Yp0" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="6dv-cp-R6l"/>
+                                    <constraint firstItem="SGx-Aw-6mC" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="9Dw-TX-x2a"/>
+                                    <constraint firstItem="XkM-wP-Yp0" firstAttribute="top" secondItem="o03-kf-JOZ" secondAttribute="top" id="Xq1-On-exB"/>
+                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="pCJ-Nb-PMz"/>
+                                    <constraint firstItem="SGx-Aw-6mC" firstAttribute="top" secondItem="XkM-wP-Yp0" secondAttribute="bottom" constant="8.5" id="tOi-P5-fdV"/>
+                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="8.5" id="yaT-sH-MI2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RDa-GN-TM3"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="o03-kf-JOZ" firstAttribute="leading" secondItem="RDa-GN-TM3" secondAttribute="leading" constant="20" id="5Vi-qy-38B"/>
+                            <constraint firstItem="o03-kf-JOZ" firstAttribute="centerY" secondItem="Dyr-Mo-Tmq" secondAttribute="centerY" id="7EF-CA-vaD"/>
+                            <constraint firstItem="RDa-GN-TM3" firstAttribute="trailing" secondItem="o03-kf-JOZ" secondAttribute="trailing" constant="20" id="I7j-7r-Ldu"/>
+                            <constraint firstItem="o03-kf-JOZ" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="ezR-zO-od9"/>
+                            <constraint firstItem="o03-kf-JOZ" firstAttribute="top" secondItem="RDa-GN-TM3" secondAttribute="top" constant="265" id="wah-L7-5xJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1853.6231884057972" y="638.83928571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="322_c144e2880b" width="564" height="251"/>

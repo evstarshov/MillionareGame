@@ -20,6 +20,7 @@ final class PlayerSettings {
     
     private enum Keys: String {
         case playerName
+        
     }
     
     static var playerName: String! {
