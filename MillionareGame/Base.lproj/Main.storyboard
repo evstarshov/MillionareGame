@@ -29,9 +29,9 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="не более 10 символов" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mpe-pC-xMB">
-                                        <rect key="frame" x="0.5" y="54.5" width="177" height="34"/>
+                                        <rect key="frame" x="19.5" y="54.5" width="139" height="34"/>
                                         <color key="textColor" systemColor="opaqueSeparatorColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D2-KW-gNy">
@@ -107,6 +107,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 2">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -119,6 +120,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 3">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -131,6 +133,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 4">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -143,6 +146,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Ответ 1">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="10"/>
                                             <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
                                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
@@ -177,6 +181,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4O-Ex-OhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="957.97101449275374" y="83.705357142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DNx-MK-snV">
+            <objects>
+                <viewController storyboardIdentifier="GameFinalID" id="Org-7I-zcb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cBP-rR-7oO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SzU-do-rlG">
+                                <rect key="frame" x="58" y="179" width="297" height="71.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поздравляем!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dcv-kj-XaA">
+                                        <rect key="frame" x="42" y="0.0" width="213" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы ответили на все вопросы" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VL-qn-GMr">
+                                        <rect key="frame" x="0.0" y="44" width="297" height="27.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="LAd-CD-Oi4">
+                                <rect key="frame" x="58" y="258" width="297" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Отвечено вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26N-jo-jaU">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kw3-ER-jW9">
+                                        <rect key="frame" x="285.5" y="0.0" width="11.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ggc-72-F6F">
+                                <rect key="frame" x="128" y="341" width="157" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBW-wT-U9Y">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A2h-QM-Y3m">
+                                        <rect key="frame" x="0.0" y="39" width="157" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Результаты">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Jtk-lF-cCN"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="Jtk-lF-cCN" firstAttribute="trailing" secondItem="LAd-CD-Oi4" secondAttribute="trailing" constant="58" id="0j6-iw-FS6"/>
+                            <constraint firstItem="Jtk-lF-cCN" firstAttribute="bottom" secondItem="ggc-72-F6F" secondAttribute="bottom" constant="451" id="6NN-rz-0LD"/>
+                            <constraint firstItem="SzU-do-rlG" firstAttribute="top" secondItem="Jtk-lF-cCN" secondAttribute="top" constant="135" id="EX6-7E-Ygk"/>
+                            <constraint firstItem="ggc-72-F6F" firstAttribute="leading" secondItem="Jtk-lF-cCN" secondAttribute="leading" constant="128" id="HE8-i8-zgO"/>
+                            <constraint firstItem="SzU-do-rlG" firstAttribute="centerX" secondItem="cBP-rR-7oO" secondAttribute="centerX" id="Kl5-PZ-wlY"/>
+                            <constraint firstItem="SzU-do-rlG" firstAttribute="leading" secondItem="Jtk-lF-cCN" secondAttribute="leading" constant="58" id="Lzj-sa-oo5"/>
+                            <constraint firstItem="ggc-72-F6F" firstAttribute="leading" secondItem="LAd-CD-Oi4" secondAttribute="trailing" constant="-227" id="Ozr-Xh-mud"/>
+                            <constraint firstItem="LAd-CD-Oi4" firstAttribute="leading" secondItem="Jtk-lF-cCN" secondAttribute="leading" constant="58" id="Tf3-W2-xhh"/>
+                            <constraint firstItem="LAd-CD-Oi4" firstAttribute="centerX" secondItem="cBP-rR-7oO" secondAttribute="centerX" id="aWH-y9-rEs"/>
+                            <constraint firstItem="ggc-72-F6F" firstAttribute="top" secondItem="cBP-rR-7oO" secondAttribute="top" constant="341" id="cuJ-3W-NIR"/>
+                            <constraint firstItem="LAd-CD-Oi4" firstAttribute="top" secondItem="SzU-do-rlG" secondAttribute="bottom" constant="7.5" id="nPW-gq-pYK"/>
+                            <constraint firstItem="Jtk-lF-cCN" firstAttribute="trailing" secondItem="SzU-do-rlG" secondAttribute="trailing" constant="58" id="pBH-aq-RQP"/>
+                            <constraint firstItem="Jtk-lF-cCN" firstAttribute="trailing" secondItem="ggc-72-F6F" secondAttribute="trailing" constant="128" id="spa-z4-UCB"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dW-G6-zHU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1869.5652173913045" y="-143.30357142857142"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="PH8-ZC-ocH">
@@ -251,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1853.6231884057972" y="638.83928571428567"/>
+            <point key="canvasLocation" x="1872" y="699"/>
         </scene>
     </scenes>
     <resources>

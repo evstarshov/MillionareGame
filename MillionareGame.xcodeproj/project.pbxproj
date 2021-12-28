@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CC8277B321A007C04AF /* GameOverViewController.swift */; };
+		3A354CCB277B3DAD007C04AF /* GameFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CCA277B3DAD007C04AF /* GameFinalViewController.swift */; };
 		3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D152777458E00EB29B9 /* AppDelegate.swift */; };
 		3AE66D182777458E00EB29B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D172777458E00EB29B9 /* SceneDelegate.swift */; };
 		3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE66D192777458E00EB29B9 /* appUtility.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		3A354CC8277B321A007C04AF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		3A354CCA277B3DAD007C04AF /* GameFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinalViewController.swift; sourceTree = "<group>"; };
 		3AE66D122777458E00EB29B9 /* MillionareGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MillionareGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE66D152777458E00EB29B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE66D172777458E00EB29B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				3AE66D492777572D00EB29B9 /* GameViewController.swift */,
 				3A354CC8277B321A007C04AF /* GameOverViewController.swift */,
+				3A354CCA277B3DAD007C04AF /* GameFinalViewController.swift */,
 			);
 			path = GameScreen;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			files = (
 				3AE66D4A2777572D00EB29B9 /* GameViewController.swift in Sources */,
 				3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */,
+				3A354CCB277B3DAD007C04AF /* GameFinalViewController.swift in Sources */,
 				3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */,
 				3AE66D4D27776B2E00EB29B9 /* Question.swift in Sources */,
 				3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */,
