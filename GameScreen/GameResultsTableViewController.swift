@@ -9,6 +9,8 @@ import UIKit
 
 class GameResultsTableViewController: UITableViewController {
     
+    @IBOutlet var tableViewHeader: TableHeader!
+    
     private let records = Game.shared.records
 
     override func viewDidLoad() {
@@ -19,11 +21,17 @@ class GameResultsTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     private func makeCells() {
+        tableView.register(UITableViewHeaderFooterView.self, forHeaderFooterViewReuseIdentifier: "headerCell")
+        tableViewHeader.imageView.image = UIImage(named: "headerImage")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "recordCell")
     }
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
+        return records.count
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return records.count
     }
     
