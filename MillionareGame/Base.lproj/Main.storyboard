@@ -295,35 +295,37 @@
                             <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Red-Mw-IrU">
-                                    <rect key="frame" x="50.5" y="5" width="313" height="31"/>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Sy-psf">
+                                    <rect key="frame" x="8" y="0.0" width="398" height="44"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
-                                            <rect key="frame" x="0.0" y="0.5" width="241" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-PR-01L">
+                                            <rect key="frame" x="230" y="8" width="160" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Clear Button"/>
+                                            <connections>
+                                                <action selector="clearTable" destination="1kl-do-4kA" eventType="touchUpInside" id="lrk-Tw-Ese"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
+                                            <rect key="frame" x="8" y="8" width="160" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Button"/>
                                             <connections>
                                                 <action selector="exitToLaunchScreen" destination="1kl-do-4kA" eventType="touchUpInside" id="xm8-gr-t2K"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzL-ch-Pg7">
-                                            <rect key="frame" x="246" y="0.0" width="67" height="31"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="gray" title="Button"/>
-                                            <connections>
-                                                <action selector="clearTable" destination="1kl-do-4kA" eventType="touchUpInside" id="QZW-eN-OQB"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
-                                </stackView>
+                                    <color key="backgroundColor" systemColor="labelColor"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="Red-Mw-IrU" firstAttribute="leading" secondItem="rhS-RO-FRy" secondAttribute="leading" constant="50.5" id="TL1-5f-vId"/>
-                                <constraint firstItem="Red-Mw-IrU" firstAttribute="centerX" secondItem="rhS-RO-FRy" secondAttribute="centerX" id="TtZ-uP-75T"/>
-                                <constraint firstAttribute="trailing" secondItem="Red-Mw-IrU" secondAttribute="trailing" constant="50.5" id="UzM-RU-7mj"/>
-                                <constraint firstItem="Red-Mw-IrU" firstAttribute="top" secondItem="rhS-RO-FRy" secondAttribute="top" constant="5" id="ae6-kD-mPd"/>
-                                <constraint firstAttribute="bottom" secondItem="Red-Mw-IrU" secondAttribute="bottom" constant="8" id="xmL-s9-FFv"/>
+                                <constraint firstItem="3Sz-Sy-psf" firstAttribute="leading" secondItem="rhS-RO-FRy" secondAttribute="leading" constant="8" id="3uZ-85-li7"/>
+                                <constraint firstItem="3Sz-Sy-psf" firstAttribute="top" secondItem="rhS-RO-FRy" secondAttribute="top" id="BYj-J2-fc7"/>
+                                <constraint firstAttribute="trailing" secondItem="3Sz-Sy-psf" secondAttribute="trailing" constant="8" id="VXd-eT-F6V"/>
+                                <constraint firstAttribute="bottom" secondItem="3Sz-Sy-psf" secondAttribute="bottom" id="a8t-uR-RVM"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -342,7 +344,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <outlet property="clearButton" destination="NzL-ch-Pg7" id="6BT-6v-ysB"/>
+                        <outlet property="clearButton" destination="xkb-PR-01L" id="i7E-YS-pp5"/>
                         <outlet property="exitButton" destination="Qa1-ZT-h20" id="91W-wA-Ah6"/>
                         <outlet property="tableFooter" destination="rhS-RO-FRy" id="B8Y-gx-lJK"/>
                         <outlet property="tableViewHeader" destination="4dJ-h2-Lxw" id="Qsb-LT-qaA"/>
@@ -370,7 +372,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJr-Pr-81b">
-                                        <rect key="frame" x="108.5" y="58" width="157" height="31"/>
+                                        <rect key="frame" x="70" y="58" width="234" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -380,7 +382,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cer-XU-pOQ">
-                                        <rect key="frame" x="109" y="97" width="158" height="31"/>
+                                        <rect key="frame" x="70" y="97" width="234" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Результаты">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -409,14 +411,16 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IJr-Pr-81b" secondAttribute="trailing" constant="70" id="53h-57-J7L"/>
                                     <constraint firstItem="XkM-wP-Yp0" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="6dv-cp-R6l"/>
                                     <constraint firstItem="SGx-Aw-6mC" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="9Dw-TX-x2a"/>
-                                    <constraint firstItem="cer-XU-pOQ" firstAttribute="leading" secondItem="o03-kf-JOZ" secondAttribute="leading" constant="109" id="C7f-An-lY4"/>
+                                    <constraint firstItem="cer-XU-pOQ" firstAttribute="leading" secondItem="o03-kf-JOZ" secondAttribute="leading" constant="70" id="C7f-An-lY4"/>
+                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="leading" secondItem="o03-kf-JOZ" secondAttribute="leading" constant="70" id="RVY-LP-f8N"/>
                                     <constraint firstItem="XkM-wP-Yp0" firstAttribute="top" secondItem="o03-kf-JOZ" secondAttribute="top" id="Xq1-On-exB"/>
                                     <constraint firstItem="cer-XU-pOQ" firstAttribute="top" secondItem="IJr-Pr-81b" secondAttribute="bottom" constant="8" symbolic="YES" id="jxm-Ym-IIl"/>
                                     <constraint firstItem="IJr-Pr-81b" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="pCJ-Nb-PMz"/>
                                     <constraint firstItem="SGx-Aw-6mC" firstAttribute="top" secondItem="XkM-wP-Yp0" secondAttribute="bottom" constant="8.5" id="tOi-P5-fdV"/>
-                                    <constraint firstAttribute="trailing" secondItem="cer-XU-pOQ" secondAttribute="trailing" constant="107" id="wSD-qI-mDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="cer-XU-pOQ" secondAttribute="trailing" constant="70" id="wSD-qI-mDF"/>
                                     <constraint firstItem="IJr-Pr-81b" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="8.5" id="yaT-sH-MI2"/>
                                 </constraints>
                             </view>

@@ -42,14 +42,14 @@ class GameResultsTableViewController: UITableViewController {
         exitButton.backgroundColor = .systemOrange
         exitButton.setTitle("Выход", for: .normal)
         exitButton.setTitleColor(.white, for: .normal)
-        exitButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        //exitButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
     }
     
     private func configureClearButton() {
         clearButton.backgroundColor = .darkGray
         clearButton.setTitle("Очистить таблицу", for: .normal)
         clearButton.setTitleColor(.white, for: .normal)
-        clearButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        //clearButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
     }
     
     @IBAction func exitToLaunchScreen () {
@@ -78,7 +78,7 @@ class GameResultsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath)
                 let record = records[indexPath.row]
         cell.backgroundColor = .black
-        cell.textLabel?.text = "Игрок: " + record.playerName + "   " + "набрал " + "\(record.playerScore)"
+        cell.textLabel?.text = "Игрок: " + record.playerName + "   " + "ответил вопросов: " + "\(record.playerScore)"
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = .systemOrange
         return cell
