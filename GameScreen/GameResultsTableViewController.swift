@@ -13,12 +13,15 @@ class GameResultsTableViewController: UITableViewController {
     @IBOutlet weak var tableFooter: TableFooter!
     @IBOutlet var tableViewHeader: TableHeader!
     
-    private let records = Game.shared.records
+    let recordTaker = RecordsCaretaker()
+    
+    private var records: [Record] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         makeCells()
         configureExitButton()
+        records = recordTaker.retrieveRecords()
     }
 
     // MARK: - Table view data source
@@ -49,7 +52,7 @@ class GameResultsTableViewController: UITableViewController {
 
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return records.count
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,7 +61,7 @@ class GameResultsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath)
-                let record = Game.shared.records[indexPath.row]
+                let record = records[indexPath.row]
         cell.backgroundColor = .black
         cell.textLabel?.text = "Игрок: " + record.playerName + "   " + "набрал " + "\(record.playerScore)"
         cell.textLabel?.textAlignment = .center

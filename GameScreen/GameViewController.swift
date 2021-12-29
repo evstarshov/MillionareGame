@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
     var pickedQuestion = Question()
     var pickedQuestionIndex: Int = 0
     private let recordsTaker = RecordsCaretaker()
+    private var recordsArray: [Record] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -116,6 +117,8 @@ class GameViewController: UIViewController {
             Player.shared.score = answeredQuestions
             let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
             Game.shared.addRecord(record)
+            recordsArray = Game.shared.records
+            recordsTaker.save(records: recordsArray)
             print("Records in table: \(Game.shared.records.count)")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameOverID") as! GameOverViewController
             self.present(vc, animated: true)
@@ -128,6 +131,8 @@ class GameViewController: UIViewController {
         Player.shared.score = answeredQuestions
         let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
         Game.shared.addRecord(record)
+        recordsArray = Game.shared.records
+        recordsTaker.save(records: recordsArray)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameFinalID") as! GameFinalViewController
         self.present(vc, animated: true)
     }
