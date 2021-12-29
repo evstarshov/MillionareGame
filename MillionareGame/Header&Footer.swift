@@ -10,3 +10,8 @@ import UIKit
 final class TableHeader: UIView {
     @IBOutlet var imageView: UIImageView!
 }
+
+
+final class TableFooter: UIView {
+    @IBOutlet var footerButton: UIButton!
+}

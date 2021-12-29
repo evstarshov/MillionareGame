@@ -34,13 +34,15 @@ class GameViewController: UIViewController {
             Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
         ]
         pickQuestion()
+        makeButtons()
     }
+    
+
     
     
     private func pickQuestion() {
         
         if let index = questions.indices.randomElement() {
-            
             let pickQuestion = questions[index]
             let answer1 = pickQuestion.answers[0]
             let answer2 = pickQuestion.answers[1]
@@ -51,13 +53,21 @@ class GameViewController: UIViewController {
             answer2Button.setTitle(answer2, for: .normal)
             answer3Button.setTitle(answer3, for: .normal)
             answer4Button.setTitle(answer4, for: .normal)
-            answer1Button.backgroundColor = .systemGray
-            answer2Button.backgroundColor = .systemGray
-            answer3Button.backgroundColor = .systemGray
-            answer4Button.backgroundColor = .systemGray
             pickedQuestion = pickQuestion
             pickedQuestionIndex = index
         }
+    }
+    
+    private func makeButtons() {
+        print("Configuring Buttons")
+        answer1Button.backgroundColor = .darkGray
+        answer2Button.backgroundColor = .darkGray
+        answer3Button.backgroundColor = .darkGray
+        answer4Button.backgroundColor = .darkGray
+        answer1Button.setTitleColor(.systemOrange, for: .normal)
+        answer2Button.setTitleColor(.systemOrange, for: .normal)
+        answer3Button.setTitleColor(.systemOrange, for: .normal)
+        answer4Button.setTitleColor(.systemOrange, for: .normal)
     }
     
     @IBAction func answer1Tapped() {
@@ -65,6 +75,7 @@ class GameViewController: UIViewController {
         answer1Button.backgroundColor = .green
         answerNumber = 1
         isAnswerCorrect()
+        makeButtons()
     }
     
     @IBAction func answer2Tapped() {
@@ -72,6 +83,7 @@ class GameViewController: UIViewController {
         answer2Button.backgroundColor = .green
         answerNumber = 2
         isAnswerCorrect()
+        makeButtons()
     }
     
     @IBAction func answer3Tapped() {
@@ -79,6 +91,7 @@ class GameViewController: UIViewController {
         answer3Button.backgroundColor = .green
         answerNumber = 3
         isAnswerCorrect()
+        makeButtons()
     }
     
     @IBAction func answer4Tapped() {
@@ -86,6 +99,7 @@ class GameViewController: UIViewController {
         answer4Button.backgroundColor = .green
         answerNumber = 4
         isAnswerCorrect()
+        makeButtons()
     }
     
     private func isAnswerCorrect() -> Bool {

@@ -47,6 +47,13 @@ class LaunchScreenViewController: UIViewController {
         }
     }
     
+    @IBAction func gotoResults() {
+        print("Openning score table")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameResultsID") as! GameResultsTableViewController
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true)
+    }
+    
     private func showAlertNameEmpty() {
             let alertController = UIAlertController(
                 title: "Ошибка",
