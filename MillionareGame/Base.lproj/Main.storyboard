@@ -218,28 +218,33 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="A2h-QM-Y3m">
-                                <rect key="frame" x="20" y="284" width="374" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Результаты">
-                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToScoreTable" destination="Org-7I-zcb" eventType="touchUpInside" id="Xla-j9-poy"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JBW-wT-U9Y">
-                                <rect key="frame" x="20" y="323" width="374" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
-                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToLaunchScreen" destination="Org-7I-zcb" eventType="touchUpInside" id="dBL-tI-M2j"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="EM2-sK-r86">
+                                <rect key="frame" x="128.5" y="392" width="157" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="A2h-QM-Y3m">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Результаты">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToScoreTable" destination="Org-7I-zcb" eventType="touchUpInside" id="Xla-j9-poy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="JBW-wT-U9Y">
+                                        <rect key="frame" x="0.0" y="60" width="157" height="52"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goToLaunchScreen" destination="Org-7I-zcb" eventType="touchUpInside" id="dBL-tI-M2j"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Jtk-lF-cCN"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
@@ -248,12 +253,12 @@
                             <constraint firstItem="SzU-do-rlG" firstAttribute="top" secondItem="Jtk-lF-cCN" secondAttribute="top" constant="135" id="EX6-7E-Ygk"/>
                             <constraint firstItem="SzU-do-rlG" firstAttribute="centerX" secondItem="cBP-rR-7oO" secondAttribute="centerX" id="Kl5-PZ-wlY"/>
                             <constraint firstItem="SzU-do-rlG" firstAttribute="leading" secondItem="Jtk-lF-cCN" secondAttribute="leading" constant="58" id="Lzj-sa-oo5"/>
+                            <constraint firstItem="EM2-sK-r86" firstAttribute="centerY" secondItem="cBP-rR-7oO" secondAttribute="centerY" id="ShY-Db-HDz"/>
                             <constraint firstItem="LAd-CD-Oi4" firstAttribute="leading" secondItem="Jtk-lF-cCN" secondAttribute="leading" constant="58" id="Tf3-W2-xhh"/>
                             <constraint firstItem="LAd-CD-Oi4" firstAttribute="centerX" secondItem="cBP-rR-7oO" secondAttribute="centerX" id="aWH-y9-rEs"/>
-                            <constraint firstItem="A2h-QM-Y3m" firstAttribute="top" secondItem="LAd-CD-Oi4" secondAttribute="bottom" constant="28" id="f4O-nb-yx8"/>
                             <constraint firstItem="LAd-CD-Oi4" firstAttribute="top" secondItem="SzU-do-rlG" secondAttribute="bottom" constant="7.5" id="nPW-gq-pYK"/>
                             <constraint firstItem="Jtk-lF-cCN" firstAttribute="trailing" secondItem="SzU-do-rlG" secondAttribute="trailing" constant="58" id="pBH-aq-RQP"/>
-                            <constraint firstItem="JBW-wT-U9Y" firstAttribute="top" secondItem="LAd-CD-Oi4" secondAttribute="bottom" constant="67" id="w78-Y0-SZy"/>
+                            <constraint firstItem="EM2-sK-r86" firstAttribute="centerX" secondItem="cBP-rR-7oO" secondAttribute="centerX" id="xxt-VM-TcG"/>
                         </constraints>
                     </view>
                     <connections>
@@ -295,37 +300,33 @@
                             <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Sz-Sy-psf">
-                                    <rect key="frame" x="8" y="0.0" width="398" height="44"/>
+                                <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="0qp-ch-VG9">
+                                    <rect key="frame" x="96" y="6" width="222" height="30"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-PR-01L">
-                                            <rect key="frame" x="230" y="8" width="160" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
+                                            <rect key="frame" x="0.0" y="0.0" width="86" height="30"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <size key="titleShadowOffset" width="21" height="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="exitToLaunchScreen" destination="1kl-do-4kA" eventType="touchUpInside" id="xm8-gr-t2K"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkb-PR-01L">
+                                            <rect key="frame" x="136" y="0.0" width="86" height="30"/>
                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                             <state key="normal" title="Clear Button"/>
                                             <connections>
                                                 <action selector="clearTable" destination="1kl-do-4kA" eventType="touchUpInside" id="lrk-Tw-Ese"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
-                                            <rect key="frame" x="8" y="8" width="160" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                            <state key="normal" title="Button"/>
-                                            <connections>
-                                                <action selector="exitToLaunchScreen" destination="1kl-do-4kA" eventType="touchUpInside" id="xm8-gr-t2K"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
-                                    <color key="backgroundColor" systemColor="labelColor"/>
-                                </view>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="3Sz-Sy-psf" firstAttribute="leading" secondItem="rhS-RO-FRy" secondAttribute="leading" constant="8" id="3uZ-85-li7"/>
-                                <constraint firstItem="3Sz-Sy-psf" firstAttribute="top" secondItem="rhS-RO-FRy" secondAttribute="top" id="BYj-J2-fc7"/>
-                                <constraint firstAttribute="trailing" secondItem="3Sz-Sy-psf" secondAttribute="trailing" constant="8" id="VXd-eT-F6V"/>
-                                <constraint firstAttribute="bottom" secondItem="3Sz-Sy-psf" secondAttribute="bottom" id="a8t-uR-RVM"/>
+                                <constraint firstItem="0qp-ch-VG9" firstAttribute="bottom" secondItem="rhS-RO-FRy" secondAttribute="bottomMargin" id="4od-Uf-mAf"/>
+                                <constraint firstItem="0qp-ch-VG9" firstAttribute="centerX" secondItem="rhS-RO-FRy" secondAttribute="centerX" id="ZOK-UU-vHw"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -362,17 +363,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o03-kf-JOZ">
-                                <rect key="frame" x="20" y="309" width="374" height="278"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРА ОКОНЧЕНА," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-wP-Yp0">
+                                <rect key="frame" x="5" y="191" width="404" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Aw-6mC">
+                                <rect key="frame" x="66.5" y="229" width="281" height="20.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ИГРА ОКОНЧЕНА," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkM-wP-Yp0">
-                                        <rect key="frame" x="110.5" y="0.0" width="153" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отвечено вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-Ke-BbZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="162.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemOrangeColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-iI-Df0">
+                                        <rect key="frame" x="269.5" y="0.0" width="11.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <color key="highlightedColor" systemColor="systemOrangeColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RTo-oR-vbl">
+                                <rect key="frame" x="128.5" y="324.5" width="157" height="70"/>
+                                <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IJr-Pr-81b">
-                                        <rect key="frame" x="70" y="58" width="234" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Вернуться в начало">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -382,7 +400,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cer-XU-pOQ">
-                                        <rect key="frame" x="70" y="97" width="234" height="31"/>
+                                        <rect key="frame" x="0.0" y="39" width="157" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Результаты">
                                             <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -391,53 +409,23 @@
                                             <action selector="goToScoreTable" destination="8ZF-n3-0hb" eventType="touchUpInside" id="Yjq-5g-ajU"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="107" translatesAutoresizingMaskIntoConstraints="NO" id="SGx-Aw-6mC">
-                                        <rect key="frame" x="46.5" y="29" width="281" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Отвечено вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrB-Ke-BbZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="162.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z7e-iI-Df0">
-                                                <rect key="frame" x="269.5" y="0.0" width="11.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                                <color key="highlightedColor" systemColor="systemOrangeColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="labelColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="IJr-Pr-81b" secondAttribute="trailing" constant="70" id="53h-57-J7L"/>
-                                    <constraint firstItem="XkM-wP-Yp0" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="6dv-cp-R6l"/>
-                                    <constraint firstItem="SGx-Aw-6mC" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="9Dw-TX-x2a"/>
-                                    <constraint firstItem="cer-XU-pOQ" firstAttribute="leading" secondItem="o03-kf-JOZ" secondAttribute="leading" constant="70" id="C7f-An-lY4"/>
-                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="leading" secondItem="o03-kf-JOZ" secondAttribute="leading" constant="70" id="RVY-LP-f8N"/>
-                                    <constraint firstItem="XkM-wP-Yp0" firstAttribute="top" secondItem="o03-kf-JOZ" secondAttribute="top" id="Xq1-On-exB"/>
-                                    <constraint firstItem="cer-XU-pOQ" firstAttribute="top" secondItem="IJr-Pr-81b" secondAttribute="bottom" constant="8" symbolic="YES" id="jxm-Ym-IIl"/>
-                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="centerX" secondItem="o03-kf-JOZ" secondAttribute="centerX" id="pCJ-Nb-PMz"/>
-                                    <constraint firstItem="SGx-Aw-6mC" firstAttribute="top" secondItem="XkM-wP-Yp0" secondAttribute="bottom" constant="8.5" id="tOi-P5-fdV"/>
-                                    <constraint firstAttribute="trailing" secondItem="cer-XU-pOQ" secondAttribute="trailing" constant="70" id="wSD-qI-mDF"/>
-                                    <constraint firstItem="IJr-Pr-81b" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="8.5" id="yaT-sH-MI2"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RDa-GN-TM3"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
-                            <constraint firstItem="o03-kf-JOZ" firstAttribute="leading" secondItem="RDa-GN-TM3" secondAttribute="leading" constant="20" id="5Vi-qy-38B"/>
-                            <constraint firstItem="o03-kf-JOZ" firstAttribute="centerY" secondItem="Dyr-Mo-Tmq" secondAttribute="centerY" id="7EF-CA-vaD"/>
-                            <constraint firstItem="RDa-GN-TM3" firstAttribute="trailing" secondItem="o03-kf-JOZ" secondAttribute="trailing" constant="20" id="I7j-7r-Ldu"/>
-                            <constraint firstItem="o03-kf-JOZ" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="ezR-zO-od9"/>
-                            <constraint firstItem="o03-kf-JOZ" firstAttribute="top" secondItem="RDa-GN-TM3" secondAttribute="top" constant="265" id="wah-L7-5xJ"/>
+                            <constraint firstItem="SGx-Aw-6mC" firstAttribute="top" secondItem="XkM-wP-Yp0" secondAttribute="bottom" constant="17.5" id="11D-T3-8hC"/>
+                            <constraint firstItem="SGx-Aw-6mC" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="Bre-F5-YRs"/>
+                            <constraint firstItem="XkM-wP-Yp0" firstAttribute="top" secondItem="RDa-GN-TM3" secondAttribute="top" constant="147" id="OsM-L1-bMS"/>
+                            <constraint firstItem="RTo-oR-vbl" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="XfF-ea-Lc2"/>
+                            <constraint firstItem="RDa-GN-TM3" firstAttribute="trailing" secondItem="XkM-wP-Yp0" secondAttribute="trailing" constant="5" id="jZV-U2-0Ml"/>
+                            <constraint firstItem="XkM-wP-Yp0" firstAttribute="leading" secondItem="RDa-GN-TM3" secondAttribute="leading" constant="5" id="lRm-QX-TyM"/>
+                            <constraint firstItem="RTo-oR-vbl" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="75" id="rmf-cQ-EIo"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="gameOverLabel" destination="XkM-wP-Yp0" id="rtb-tF-YQy"/>
-                        <outlet property="returnToBeginBTN" destination="pCJ-Nb-PMz" id="D9C-tf-ffp"/>
                         <outlet property="scoreLabel" destination="Z7e-iI-Df0" id="O3b-ih-ZDb"/>
                     </connections>
                 </viewController>
