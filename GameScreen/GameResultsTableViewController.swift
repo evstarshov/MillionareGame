@@ -10,6 +10,7 @@ import UIKit
 class GameResultsTableViewController: UITableViewController {
     
     @IBOutlet weak var exitButton: UIButton!
+    @IBOutlet weak var clearButton: UIButton!
     @IBOutlet weak var tableFooter: TableFooter!
     @IBOutlet var tableViewHeader: TableHeader!
     
@@ -21,6 +22,7 @@ class GameResultsTableViewController: UITableViewController {
         super.viewDidLoad()
         makeCells()
         configureExitButton()
+        configureClearButton()
         records = recordTaker.retrieveRecords()
     }
 
@@ -43,11 +45,24 @@ class GameResultsTableViewController: UITableViewController {
         exitButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
     }
     
+    private func configureClearButton() {
+        clearButton.backgroundColor = .darkGray
+        clearButton.setTitle("Очистить таблицу", for: .normal)
+        clearButton.setTitleColor(.white, for: .normal)
+        clearButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
+    }
+    
     @IBAction func exitToLaunchScreen () {
         print("Going back to launch screen")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchScreen") as! LaunchScreenViewController
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
+    }
+    
+    @IBAction func clearTable() {
+        Game.shared.clearRecords()
+        records.removeAll()
+        tableView.reloadData()
     }
 
 

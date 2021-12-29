@@ -295,21 +295,35 @@
                             <rect key="frame" x="0.0" y="154.5" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
-                                    <rect key="frame" x="8" y="5" width="398" height="34"/>
-                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                    <state key="normal" title="Button"/>
-                                    <connections>
-                                        <action selector="exitToLaunchScreen" destination="1kl-do-4kA" eventType="touchUpInside" id="xm8-gr-t2K"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Red-Mw-IrU">
+                                    <rect key="frame" x="50.5" y="5" width="313" height="31"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa1-ZT-h20">
+                                            <rect key="frame" x="0.0" y="0.5" width="241" height="30"/>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="exitToLaunchScreen" destination="1kl-do-4kA" eventType="touchUpInside" id="xm8-gr-t2K"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NzL-ch-Pg7">
+                                            <rect key="frame" x="246" y="0.0" width="67" height="31"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="gray" title="Button"/>
+                                            <connections>
+                                                <action selector="clearTable" destination="1kl-do-4kA" eventType="touchUpInside" id="QZW-eN-OQB"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstItem="Qa1-ZT-h20" firstAttribute="trailing" secondItem="rhS-RO-FRy" secondAttribute="trailingMargin" id="45i-2T-Wlh"/>
-                                <constraint firstItem="Qa1-ZT-h20" firstAttribute="leading" secondItem="rhS-RO-FRy" secondAttribute="leadingMargin" id="gpJ-Yx-vUT"/>
-                                <constraint firstItem="Qa1-ZT-h20" firstAttribute="top" secondItem="rhS-RO-FRy" secondAttribute="top" constant="5" id="nI5-l5-4B7"/>
-                                <constraint firstItem="Qa1-ZT-h20" firstAttribute="centerY" secondItem="rhS-RO-FRy" secondAttribute="centerY" id="rNq-SN-y1k"/>
+                                <constraint firstItem="Red-Mw-IrU" firstAttribute="leading" secondItem="rhS-RO-FRy" secondAttribute="leading" constant="50.5" id="TL1-5f-vId"/>
+                                <constraint firstItem="Red-Mw-IrU" firstAttribute="centerX" secondItem="rhS-RO-FRy" secondAttribute="centerX" id="TtZ-uP-75T"/>
+                                <constraint firstAttribute="trailing" secondItem="Red-Mw-IrU" secondAttribute="trailing" constant="50.5" id="UzM-RU-7mj"/>
+                                <constraint firstItem="Red-Mw-IrU" firstAttribute="top" secondItem="rhS-RO-FRy" secondAttribute="top" constant="5" id="ae6-kD-mPd"/>
+                                <constraint firstAttribute="bottom" secondItem="Red-Mw-IrU" secondAttribute="bottom" constant="8" id="xmL-s9-FFv"/>
                             </constraints>
                         </view>
                         <prototypes>
@@ -328,6 +342,7 @@
                         </connections>
                     </tableView>
                     <connections>
+                        <outlet property="clearButton" destination="NzL-ch-Pg7" id="6BT-6v-ysB"/>
                         <outlet property="exitButton" destination="Qa1-ZT-h20" id="91W-wA-Ah6"/>
                         <outlet property="tableFooter" destination="rhS-RO-FRy" id="B8Y-gx-lJK"/>
                         <outlet property="tableViewHeader" destination="4dJ-h2-Lxw" id="Qsb-LT-qaA"/>
