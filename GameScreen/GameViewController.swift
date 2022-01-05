@@ -155,7 +155,7 @@ class GameViewController: UIViewController {
     private func gameFinal() {
         guard questions.count == 0 else { return }
         Player.shared.score = answeredQuestions
-        Player.shared.percent = percent
+        Player.shared.percent = 100
         let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0, playerPercentage: Player.shared.percent ?? 0)
         Game.shared.addRecord(record)
         recordsArray = Game.shared.records
