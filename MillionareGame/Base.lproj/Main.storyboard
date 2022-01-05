@@ -496,14 +496,33 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="98" translatesAutoresizingMaskIntoConstraints="NO" id="7Go-oS-0hJ">
+                                <rect key="frame" x="63" y="257" width="288.5" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Процент отвеченных:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zmQ-B5-kna">
+                                        <rect key="frame" x="0.0" y="0.0" width="173" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6Y-sw-whw">
+                                        <rect key="frame" x="271" y="0.0" width="17.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <color key="highlightedColor" systemColor="systemOrangeColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RDa-GN-TM3"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="SGx-Aw-6mC" firstAttribute="top" secondItem="XkM-wP-Yp0" secondAttribute="bottom" constant="17.5" id="11D-T3-8hC"/>
                             <constraint firstItem="SGx-Aw-6mC" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="Bre-F5-YRs"/>
+                            <constraint firstItem="7Go-oS-0hJ" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="7.5" id="Eg2-sS-icL"/>
                             <constraint firstItem="XkM-wP-Yp0" firstAttribute="top" secondItem="RDa-GN-TM3" secondAttribute="top" constant="147" id="OsM-L1-bMS"/>
                             <constraint firstItem="RTo-oR-vbl" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="XfF-ea-Lc2"/>
+                            <constraint firstItem="7Go-oS-0hJ" firstAttribute="centerX" secondItem="Dyr-Mo-Tmq" secondAttribute="centerX" id="YS7-qN-s2O"/>
                             <constraint firstItem="RDa-GN-TM3" firstAttribute="trailing" secondItem="XkM-wP-Yp0" secondAttribute="trailing" constant="5" id="jZV-U2-0Ml"/>
                             <constraint firstItem="XkM-wP-Yp0" firstAttribute="leading" secondItem="RDa-GN-TM3" secondAttribute="leading" constant="5" id="lRm-QX-TyM"/>
                             <constraint firstItem="RTo-oR-vbl" firstAttribute="top" secondItem="SGx-Aw-6mC" secondAttribute="bottom" constant="75" id="rmf-cQ-EIo"/>
@@ -511,7 +530,8 @@
                     </view>
                     <connections>
                         <outlet property="gameOverLabel" destination="XkM-wP-Yp0" id="rtb-tF-YQy"/>
-                        <outlet property="scoreLabel" destination="Z7e-iI-Df0" id="O3b-ih-ZDb"/>
+                        <outlet property="percentLabel" destination="W6Y-sw-whw" id="E6s-Vs-Lb2"/>
+                        <outlet property="scoreLabel" destination="Z7e-iI-Df0" id="0Je-qR-sm9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

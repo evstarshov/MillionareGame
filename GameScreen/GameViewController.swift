@@ -140,7 +140,8 @@ class GameViewController: UIViewController {
         } else {
             print("Game over by player \(Player.shared.name ?? "")")
             Player.shared.score = answeredQuestions
-            let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+            Player.shared.percent = percent
+            let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0, playerPercentage: Player.shared.percent ?? 0)
             Game.shared.addRecord(record)
             recordsArray = Game.shared.records
             recordsTaker.save(records: recordsArray)
@@ -154,7 +155,8 @@ class GameViewController: UIViewController {
     private func gameFinal() {
         guard questions.count == 0 else { return }
         Player.shared.score = answeredQuestions
-        let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+        Player.shared.percent = percent
+        let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0, playerPercentage: Player.shared.percent ?? 0)
         Game.shared.addRecord(record)
         recordsArray = Game.shared.records
         recordsTaker.save(records: recordsArray)
