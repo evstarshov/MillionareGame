@@ -32,11 +32,13 @@ class GameViewController: UIViewController {
     }
     
     
-    
+    let numberFormatter = NumberFormatter()
     var questions = [Question]()
     var questionNumber = 0
     var answerNumber = Int()
     var answeredQuestions: Int = 0
+    var percent: Float = 0
+    var allQuestions: Int = 0
     var pickedQuestion = Question()
     private let recordsTaker = RecordsCaretaker()
     private var recordsArray: [Record] = []
@@ -50,6 +52,7 @@ class GameViewController: UIViewController {
 
     fileprivate func makeQuestions() {
         questions = self.createQuestionsStrategy.makeQuestions()
+        allQuestions = questions.count
         pickQuestion()
     }
     
@@ -69,6 +72,16 @@ class GameViewController: UIViewController {
         pickedQuestion = pickQuestion ?? Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
         questionNumber += 1
         questionCounterLabel.text = "Вопрос №\(questionNumber)"
+        percent = percentage()
+        let a = numberFormatter.string(from: NSNumber(value: percent))
+        questionPercentageLabel.text = "Отвечено: \(a ?? "")%"
+    }
+    
+    private func percentage() -> Float {
+        let question = Float(answeredQuestions)
+        let allquestions = Float(allQuestions)
+        let x = (question / allquestions) * 100
+        return x
     }
 
     private func makeButtons() {
@@ -146,6 +159,7 @@ class GameViewController: UIViewController {
         recordsArray = Game.shared.records
         recordsTaker.save(records: recordsArray)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameFinalID") as! GameFinalViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
 }
