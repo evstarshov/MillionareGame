@@ -14,6 +14,8 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
+    @IBOutlet weak var questionCounterLabel: UILabel!
+    @IBOutlet weak var questionPercentageLabel: UILabel!
     
 
     
@@ -32,7 +34,7 @@ class GameViewController: UIViewController {
     
     
     var questions = [Question]()
-    var questionNumber = Int()
+    var questionNumber = 0
     var answerNumber = Int()
     var answeredQuestions: Int = 0
     var pickedQuestion = Question()
@@ -65,6 +67,8 @@ class GameViewController: UIViewController {
             answer3Button.setTitle(answer3, for: .normal)
             answer4Button.setTitle(answer4, for: .normal)
         pickedQuestion = pickQuestion ?? Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
+        questionNumber += 1
+        questionCounterLabel.text = "Вопрос №\(questionNumber)"
     }
 
     private func makeButtons() {

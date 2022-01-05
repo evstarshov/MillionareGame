@@ -153,10 +153,29 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="94" translatesAutoresizingMaskIntoConstraints="NO" id="3Qt-w0-4Fe">
+                                <rect key="frame" x="64" y="531" width="286" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Номер вопроса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vP-GD-Ss1">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="процент" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbt-HO-qF8">
+                                        <rect key="frame" x="219" y="0.0" width="67" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XtX-Z0-n8L"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
+                            <constraint firstItem="3Qt-w0-4Fe" firstAttribute="top" secondItem="tof-k8-3JW" secondAttribute="bottom" constant="84" id="05p-9f-ko7"/>
+                            <constraint firstItem="3Qt-w0-4Fe" firstAttribute="centerX" secondItem="thZ-Hb-JNM" secondAttribute="centerX" id="0i3-CP-1h3"/>
                             <constraint firstItem="wbO-JW-Wee" firstAttribute="leading" secondItem="XtX-Z0-n8L" secondAttribute="leading" constant="20" id="7fm-FW-wxv"/>
                             <constraint firstItem="XtX-Z0-n8L" firstAttribute="trailing" secondItem="6Px-AU-k8g" secondAttribute="trailing" constant="20" id="8A7-j3-ZOJ"/>
                             <constraint firstItem="wbO-JW-Wee" firstAttribute="top" secondItem="6Px-AU-k8g" secondAttribute="bottom" constant="5" id="EL7-sA-6F4"/>
@@ -179,7 +198,9 @@
                         <outlet property="answer2Button" destination="rss-QN-dEx" id="33U-ed-qqy"/>
                         <outlet property="answer3Button" destination="XhU-UR-wTf" id="ZT3-Vg-bLy"/>
                         <outlet property="answer4Button" destination="asn-Vl-Pom" id="U8G-Pz-UMH"/>
+                        <outlet property="questionCounterLabel" destination="3vP-GD-Ss1" id="Yik-bN-9tb"/>
                         <outlet property="questionLabel" destination="wbO-JW-Wee" id="0Vn-x0-7mY"/>
+                        <outlet property="questionPercentageLabel" destination="Lbt-HO-qF8" id="PCt-yz-wdr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4O-Ex-OhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
