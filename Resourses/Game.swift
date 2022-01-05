@@ -23,3 +23,5 @@ final class Game: Codable {
         self.records = []
     }
 }
+
+
