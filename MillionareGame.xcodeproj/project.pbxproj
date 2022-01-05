@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2832222785A96D00AF7015 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2832212785A96D00AF7015 /* Settings.swift */; };
+		3A2832252785ABFC00AF7015 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2832242785ABFC00AF7015 /* SettingsViewController.swift */; };
 		3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CC8277B321A007C04AF /* GameOverViewController.swift */; };
 		3A354CCB277B3DAD007C04AF /* GameFinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CCA277B3DAD007C04AF /* GameFinalViewController.swift */; };
 		3A354CCD277B4948007C04AF /* GameResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A354CCC277B4948007C04AF /* GameResultsTableViewController.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3A2832212785A96D00AF7015 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3A2832242785ABFC00AF7015 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		3A354CC8277B321A007C04AF /* GameOverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		3A354CCA277B3DAD007C04AF /* GameFinalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFinalViewController.swift; sourceTree = "<group>"; };
 		3A354CCC277B4948007C04AF /* GameResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultsTableViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +100,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2832232785AB6700AF7015 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				3A2832212785A96D00AF7015 /* Settings.swift */,
+				3A2832242785ABFC00AF7015 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		3AE66D092777458E00EB29B9 = {
 			isa = PBXGroup;
 			children = (
+				3A2832232785AB6700AF7015 /* Settings */,
 				3AE66D4B27776B1200EB29B9 /* Resourses */,
 				3AE66D482777571200EB29B9 /* GameScreen */,
 				3AE66D452777460B00EB29B9 /* LaunchScreen */,
@@ -316,9 +330,11 @@
 				3A6E42F6277C4336000CB5BE /* Header&Footer.swift in Sources */,
 				3AE66D1A2777458E00EB29B9 /* appUtility.swift in Sources */,
 				3A354CCB277B3DAD007C04AF /* GameFinalViewController.swift in Sources */,
+				3A2832222785A96D00AF7015 /* Settings.swift in Sources */,
 				3AE66D162777458E00EB29B9 /* AppDelegate.swift in Sources */,
 				3AE66D4D27776B2E00EB29B9 /* Question.swift in Sources */,
 				3A354CC9277B321A007C04AF /* GameOverViewController.swift in Sources */,
+				3A2832252785ABFC00AF7015 /* SettingsViewController.swift in Sources */,
 				3AE66D4F277770B200EB29B9 /* Player.swift in Sources */,
 				3A354CD1277B6240007C04AF /* Game.swift in Sources */,
 				3A354CCF277B52AB007C04AF /* Results.swift in Sources */,

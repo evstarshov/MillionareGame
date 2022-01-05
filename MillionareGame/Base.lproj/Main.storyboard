@@ -20,7 +20,7 @@
                                 <rect key="frame" x="20" y="49" width="374" height="251"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6q-gZ-CAE">
-                                <rect key="frame" x="50" y="308" width="314" height="183.5"/>
+                                <rect key="frame" x="50" y="308" width="314" height="234.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-yS-iaU">
                                         <rect key="frame" x="90.5" y="0.0" width="133" height="27.5"/>
@@ -58,6 +58,16 @@
                                             <action selector="gotoResults" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZUx-6J-bOx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uMy-Hl-ahd">
+                                        <rect key="frame" x="108.5" y="203.5" width="97.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Настройки">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="gotoSettings" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vei-3n-6I6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -78,6 +88,7 @@
                         <outlet property="nameTextField" destination="mpe-pC-xMB" id="KjK-Mu-MhA"/>
                         <outlet property="newGameButton" destination="2D2-KW-gNy" id="flD-em-wHJ"/>
                         <outlet property="resultsButton" destination="4K0-Wl-fAP" id="yg0-in-kIb"/>
+                        <outlet property="settingsButton" destination="uMy-Hl-ahd" id="fy2-GA-4dW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -432,6 +443,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Yw-YP-Qqf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2951" y="893"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="DlD-fp-2AR">
+            <objects>
+                <viewController storyboardIdentifier="SettingsID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8NH-Ph-OMD" customClass="SettingsViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="It3-ho-4Hy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azv-fD-AsN">
+                                <rect key="frame" x="140" y="114" width="134.5" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RRF-GZ-Anh">
+                                <rect key="frame" x="57.5" y="217" width="299" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="33n-ct-41N">
+                                        <rect key="frame" x="0.0" y="0.0" width="144.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Последовательно">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3UF-0L-As1">
+                                        <rect key="frame" x="154.5" y="0.0" width="144.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Случайно">
+                                            <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последовательность вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIg-7U-jjk">
+                                <rect key="frame" x="81" y="188" width="252.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7QM-Uy-1xx"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="azv-fD-AsN" firstAttribute="centerX" secondItem="It3-ho-4Hy" secondAttribute="centerX" id="Lkx-yf-S3f"/>
+                            <constraint firstItem="RRF-GZ-Anh" firstAttribute="centerX" secondItem="It3-ho-4Hy" secondAttribute="centerX" id="OXR-IC-X6v"/>
+                            <constraint firstItem="eIg-7U-jjk" firstAttribute="top" secondItem="azv-fD-AsN" secondAttribute="bottom" constant="44" id="S2R-PZ-0yQ"/>
+                            <constraint firstItem="azv-fD-AsN" firstAttribute="top" secondItem="7QM-Uy-1xx" secondAttribute="top" constant="70" id="VP9-5w-fV6"/>
+                            <constraint firstItem="eIg-7U-jjk" firstAttribute="centerX" secondItem="It3-ho-4Hy" secondAttribute="centerX" id="d6d-8M-zMR"/>
+                            <constraint firstItem="RRF-GZ-Anh" firstAttribute="top" secondItem="eIg-7U-jjk" secondAttribute="bottom" constant="8.5" id="yRO-ZR-D12"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="randomButton" destination="3UF-0L-As1" id="cvG-1E-9WF"/>
+                        <outlet property="sequentallyButton" destination="33n-ct-41N" id="72s-HC-5Xf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Jr-no-K3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2951" y="1647"/>
         </scene>
     </scenes>
     <resources>

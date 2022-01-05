@@ -12,6 +12,7 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var resultsButton: UIButton!
+    @IBOutlet weak var settingsButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +53,10 @@ class LaunchScreenViewController: UIViewController {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameResultsID") as! GameResultsTableViewController
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true)
+    }
+    
+    @IBAction func gotoSettings() {
+        
     }
     
     private func showAlertNameEmpty() {

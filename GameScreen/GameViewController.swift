@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
     
+    var sequence: QuestionSequence = .random
     var questions = [Question]()
     var questionNumber = Int()
     var answerNumber = Int()
