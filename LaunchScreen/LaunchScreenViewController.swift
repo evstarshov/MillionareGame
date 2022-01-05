@@ -12,7 +12,7 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var resultsButton: UIButton!
-    @IBOutlet weak var sequentSelector: UISegmentedControl!
+    @IBOutlet weak var gotoSettingsButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -42,7 +42,7 @@ class LaunchScreenViewController: UIViewController {
             Player.shared.name = name
             print("game started by player \(Player.shared.name ?? "")")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewControllerID") as! GameViewController
-            vc.sequence = self.selectSequent
+            vc.sequence = Game.sequence
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         } else {
@@ -53,6 +53,13 @@ class LaunchScreenViewController: UIViewController {
     @IBAction func gotoResults() {
         print("Openning score table")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameResultsID") as! GameResultsTableViewController
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func gotoSettings() {
+        print("Openning settings")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsID") as! SettingsViewController
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true)
     }
@@ -105,16 +112,7 @@ class LaunchScreenViewController: UIViewController {
         }
     }
     
-    private var selectSequent: QuestionSequence {
-        switch self.sequentSelector.selectedSegmentIndex {
-        case 0:
-            return .sequentally
-        case 1:
-            return .random
-        default:
-            return .random
-        }
-    }
+
     
 
 }

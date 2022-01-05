@@ -20,7 +20,7 @@
                                 <rect key="frame" x="5" y="49" width="404" height="251"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s6q-gZ-CAE">
-                                <rect key="frame" x="137.5" y="325" width="139" height="183.5"/>
+                                <rect key="frame" x="137.5" y="325" width="139" height="234.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите имя" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FDg-yS-iaU">
                                         <rect key="frame" x="3" y="0.0" width="133" height="27.5"/>
@@ -58,40 +58,32 @@
                                             <action selector="gotoResults" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZUx-6J-bOx"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uT-hr-nUB">
+                                        <rect key="frame" x="21" y="203.5" width="97.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Настройки">
+                                            <color key="baseBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="gotoSettings" destination="BYZ-38-t0r" eventType="touchUpInside" id="9kw-5i-3Ez"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UV5-LN-oMy">
-                                <rect key="frame" x="72.5" y="601" width="269" height="32"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <segments>
-                                    <segment title="Последовательно"/>
-                                    <segment title="Случайно"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" systemColor="systemOrangeColor"/>
-                            </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последовательность вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIg-7U-jjk">
-                                <rect key="frame" x="81" y="562" width="252.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="5aB-SS-Gaa" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="5" id="0JH-Dt-UcI"/>
-                            <constraint firstItem="UV5-LN-oMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3uF-Wd-azD"/>
                             <constraint firstItem="5aB-SS-Gaa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="5" id="FRX-Rk-Umi"/>
-                            <constraint firstItem="UV5-LN-oMy" firstAttribute="top" secondItem="eIg-7U-jjk" secondAttribute="bottom" constant="18.5" id="MgZ-3c-AZu"/>
                             <constraint firstItem="5aB-SS-Gaa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Odg-jH-mk9"/>
-                            <constraint firstItem="eIg-7U-jjk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vxs-ZY-rQ4"/>
                             <constraint firstAttribute="trailing" secondItem="5aB-SS-Gaa" secondAttribute="trailing" constant="5" id="ZxD-sJ-TVt"/>
                             <constraint firstItem="s6q-gZ-CAE" firstAttribute="top" secondItem="5aB-SS-Gaa" secondAttribute="bottom" constant="25" id="ciy-yQ-ZJr"/>
-                            <constraint firstItem="eIg-7U-jjk" firstAttribute="top" secondItem="s6q-gZ-CAE" secondAttribute="bottom" constant="53.5" id="gd1-3k-BgJ"/>
                             <constraint firstItem="s6q-gZ-CAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vQY-GE-ivM"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="gotoSettingsButton" destination="3uT-hr-nUB" id="Y7A-oi-jJ2"/>
                         <outlet property="nameTextField" destination="mpe-pC-xMB" id="KjK-Mu-MhA"/>
                         <outlet property="newGameButton" destination="2D2-KW-gNy" id="flD-em-wHJ"/>
                         <outlet property="resultsButton" destination="4K0-Wl-fAP" id="yg0-in-kIb"/>
@@ -372,6 +364,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z3T-LU-Fqt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2950.7246376811595" y="80.357142857142847"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="NYW-zi-W1b">
+            <objects>
+                <viewController storyboardIdentifier="SettingsID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q2A-MG-LlP" customClass="SettingsViewController" customModule="MillionareGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FJK-67-HBY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R2u-Uz-B96">
+                                <rect key="frame" x="134.5" y="94" width="145" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Последовательность вопросов:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIg-7U-jjk">
+                                <rect key="frame" x="81" y="135" width="252.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="UV5-LN-oMy">
+                                <rect key="frame" x="72.5" y="163" width="269" height="32"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <segments>
+                                    <segment title="Последовательно"/>
+                                    <segment title="Случайно"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="systemOrangeColor"/>
+                                <connections>
+                                    <action selector="selector:" destination="q2A-MG-LlP" eventType="valueChanged" id="ImR-m4-f6u"/>
+                                    <action selector="sequentSelector:" destination="opT-wE-OBG" eventType="valueChanged" id="on3-Zd-KTs"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vr2-8c-qdC"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="eIg-7U-jjk" firstAttribute="top" secondItem="R2u-Uz-B96" secondAttribute="bottom" constant="8" symbolic="YES" id="0Cl-1b-UWQ"/>
+                            <constraint firstItem="R2u-Uz-B96" firstAttribute="top" secondItem="vr2-8c-qdC" secondAttribute="top" constant="50" id="CUx-6n-WoS"/>
+                            <constraint firstItem="UV5-LN-oMy" firstAttribute="top" secondItem="eIg-7U-jjk" secondAttribute="bottom" constant="7.5" id="c1K-NE-lFA"/>
+                            <constraint firstItem="R2u-Uz-B96" firstAttribute="centerX" secondItem="FJK-67-HBY" secondAttribute="centerX" id="ixK-oX-ywt"/>
+                            <constraint firstItem="UV5-LN-oMy" firstAttribute="centerX" secondItem="FJK-67-HBY" secondAttribute="centerX" id="jC9-uA-mDv"/>
+                            <constraint firstItem="eIg-7U-jjk" firstAttribute="centerX" secondItem="FJK-67-HBY" secondAttribute="centerX" id="sDM-HH-DHs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sequentSelector" destination="UV5-LN-oMy" id="SEC-cL-KDL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3g-Zy-20t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="opT-wE-OBG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2951" y="1594"/>
         </scene>
         <!--Game Over View Controller-->
         <scene sceneID="PH8-ZC-ocH">

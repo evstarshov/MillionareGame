@@ -10,6 +10,7 @@ import Foundation
 final class Game: Codable {
     
     static let shared = Game()
+    static var sequence: QuestionSequence = .sequentally
     
     private(set) var records: [Record] = []
     
