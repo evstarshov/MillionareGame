@@ -619,12 +619,24 @@
                                     <action selector="appendQuestion" destination="tII-cI-TMk" eventType="touchUpInside" id="tXf-dI-AoX"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SD4-IZ-Y5G">
+                                <rect key="frame" x="133.5" y="734" width="147" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Вернуться в меню">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="gotoLauchMenu" destination="tII-cI-TMk" eventType="touchUpInside" id="dyo-Yl-5Ue"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pqi-Qw-jmy"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
+                            <constraint firstItem="SD4-IZ-Y5G" firstAttribute="top" secondItem="mkd-gn-bl5" secondAttribute="bottom" constant="48" id="AI4-et-GS5"/>
                             <constraint firstItem="mkd-gn-bl5" firstAttribute="centerX" secondItem="R6M-r5-Mem" secondAttribute="centerX" id="STB-Ek-BZ2"/>
                             <constraint firstItem="3hB-O6-7pZ" firstAttribute="centerX" secondItem="R6M-r5-Mem" secondAttribute="centerX" id="Txi-v3-kzE"/>
+                            <constraint firstItem="SD4-IZ-Y5G" firstAttribute="centerX" secondItem="R6M-r5-Mem" secondAttribute="centerX" id="nJQ-QA-9CE"/>
                             <constraint firstItem="3hB-O6-7pZ" firstAttribute="centerY" secondItem="R6M-r5-Mem" secondAttribute="centerY" id="pNj-Y6-adL"/>
                             <constraint firstItem="mkd-gn-bl5" firstAttribute="top" secondItem="3hB-O6-7pZ" secondAttribute="bottom" constant="8" symbolic="YES" id="r3N-Sv-d6d"/>
                         </constraints>
@@ -636,6 +648,7 @@
                         <outlet property="answer4TextBox" destination="WJQ-HH-Mz1" id="odt-fN-ZNA"/>
                         <outlet property="answerSelector" destination="Iu3-iX-9gP" id="fYV-aM-R2N"/>
                         <outlet property="confirmButton" destination="mkd-gn-bl5" id="ldf-dK-nSz"/>
+                        <outlet property="gotoMenuButton" destination="SD4-IZ-Y5G" id="gw9-cm-Ecy"/>
                         <outlet property="questionTextBox" destination="i9Y-4U-LwZ" id="X8I-lb-hHQ"/>
                     </connections>
                 </viewController>

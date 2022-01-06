@@ -12,7 +12,7 @@ final class QuestionCaretaker {
     private let encoder = JSONEncoder()
     private let decoder = JSONDecoder()
     
-    private let key = "records"
+    private let key = "questions"
     
     func save(questions: [Question]) {
         do {

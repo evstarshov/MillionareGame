@@ -15,6 +15,7 @@ protocol QuestionSequenceStrategy {
 
 final class RandomQuestionSequenceStrategy: QuestionSequenceStrategy {
     
+    private let questionTaker = QuestionCaretaker()
     private var questions = [
         Question(question: "Из какого фильма Прекрасный принц?", answers: ["Золушка","Русалочка","Спящая Красавица","Мулан"], correctAnswer: 1),
         Question(question: "Из какой страны родом Джастин Бибер?", answers: ["Канада","США","Франция","Англия"], correctAnswer: 1),
@@ -25,13 +26,14 @@ final class RandomQuestionSequenceStrategy: QuestionSequenceStrategy {
     ]
     
     func makeQuestions() -> [Question] {
-        var questionArr = [Question]()
+        var questionArr = questionTaker.retrieveQuestions()
         for _ in questions {
         let indexR = questions.indices.randomElement()
         let pickQuestion = Question(question: questions[indexR ?? 0].question, answers: questions[indexR ?? 0].answers, correctAnswer: questions[indexR ?? 0].correctAnswer)
             questionArr.append(pickQuestion)
             questions.remove(at: indexR ?? 0)
         }
+        
         return questionArr
     }
     
@@ -40,6 +42,7 @@ final class RandomQuestionSequenceStrategy: QuestionSequenceStrategy {
 
 final class SequentQuestionSequenceStrategy: QuestionSequenceStrategy {
     
+    private let questionTaker = QuestionCaretaker()
     private let questions = [
         Question(question: "Из какого фильма Прекрасный принц?", answers: ["Золушка","Русалочка","Спящая Красавица","Мулан"], correctAnswer: 1),
         Question(question: "Из какой страны родом Джастин Бибер?", answers: ["Канада","США","Франция","Англия"], correctAnswer: 1),
@@ -52,7 +55,9 @@ final class SequentQuestionSequenceStrategy: QuestionSequenceStrategy {
     
     func makeQuestions() -> [Question] {
         let questionArr = questions
-        return questionArr
+        let moreQuestions = questionTaker.retrieveQuestions()
+        let full = questionArr + moreQuestions
+        return full
     }
     
     

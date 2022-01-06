@@ -16,6 +16,7 @@ class AddQuestionViewController: UIViewController {
     @IBOutlet weak var answer4TextBox: UITextField!
     @IBOutlet weak var answerSelector: UISegmentedControl!
     @IBOutlet weak var confirmButton: UIButton!
+    @IBOutlet weak var gotoMenuButton: UIButton!
     
     private let questionTaker = QuestionCaretaker()
     private var questionArray = [Question]()
@@ -37,13 +38,22 @@ class AddQuestionViewController: UIViewController {
         print("Appending new question to array")
         if isValid() == false {
             takeQuestion()
-            questionTaker.save(questions: questionArray)
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchScreen") as! LaunchScreenViewController
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
+            questionAddedAlert()
+            questionTextBox.text = ""
+            answer1TextBox.text = ""
+            answer2TextBox.text = ""
+            answer3TextBox.text = ""
+            answer4TextBox.text = ""
         } else {
             showAlertTextEmpty()
         }
+    }
+    
+    @IBAction func gotoLauchMenu() {
+        questionTaker.save(questions: questionArray)
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchScreen") as! LaunchScreenViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
     
     
@@ -59,9 +69,8 @@ class AddQuestionViewController: UIViewController {
         answers.append(answer2)
         answers.append(answer3)
         answers.append(answer4)
-        let questionToadd = [Question(question: question, answers: answers, correctAnswer: Int(correctAnswer))]
-        questionTaker.save(questions: questionToadd)
-        questionArray = questionToadd
+        let questionToadd = Question(question: question, answers: answers, correctAnswer: Int(correctAnswer))
+        questionArray.append(questionToadd)
     }
 
     private func isValid() -> Bool {
@@ -81,6 +90,20 @@ class AddQuestionViewController: UIViewController {
             let alertItem = UIAlertAction(
                 title: "Ok:(",
                 style: .cancel)
+            alertController.addAction(alertItem)
+            present(alertController,
+                    animated: true,
+                    completion: nil)
+        }
+    
+    private func questionAddedAlert() {
+            let alertController = UIAlertController(
+                title: "Получилось",
+                message: "Ваш вопрос добавлен. Вы можете добавить еще вопросы, или нажать кнопку закончить для возврата в меню.",
+                preferredStyle: .alert)
+            let alertItem = UIAlertAction(
+                title: "Ok",
+                style: .default)
             alertController.addAction(alertItem)
             present(alertController,
                     animated: true,
