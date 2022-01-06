@@ -558,7 +558,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="3hB-O6-7pZ">
-                                <rect key="frame" x="43" y="275" width="328.5" height="346"/>
+                                <rect key="frame" x="43" y="249" width="328.5" height="398"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Добавление вашего вопроса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qRG-v5-4aB">
                                         <rect key="frame" x="0.0" y="0.0" width="328.5" height="34"/>
@@ -591,15 +591,26 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Номер правильного ответа" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sjN-Cj-6Xs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите номер правильного ответа" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VdJ-8Y-27c">
                                         <rect key="frame" x="0.0" y="312" width="328.5" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemOrangeColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Iu3-iX-9gP">
+                                        <rect key="frame" x="0.0" y="364" width="328.5" height="35"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                        <segments>
+                                            <segment title="1"/>
+                                            <segment title="2"/>
+                                            <segment title="3"/>
+                                            <segment title="4"/>
+                                        </segments>
+                                    </segmentedControl>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-gn-bl5">
-                                <rect key="frame" x="163" y="629" width="88.5" height="31"/>
+                                <rect key="frame" x="163" y="655" width="88.5" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Добавить">
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
@@ -621,8 +632,8 @@
                         <outlet property="answer3TextBox" destination="l6X-lI-L2s" id="ZaL-AF-LOU"/>
                         <outlet property="answer4TextBox" destination="WJQ-HH-Mz1" id="odt-fN-ZNA"/>
                         <outlet property="confirmButton" destination="mkd-gn-bl5" id="ldf-dK-nSz"/>
-                        <outlet property="correctAnswerTextBox" destination="sjN-Cj-6Xs" id="Rxg-6z-M3E"/>
                         <outlet property="questionTextBox" destination="i9Y-4U-LwZ" id="X8I-lb-hHQ"/>
+                        <outlet property="takeAnswer" destination="Iu3-iX-9gP" id="nOj-BN-AY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSq-fJ-fTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

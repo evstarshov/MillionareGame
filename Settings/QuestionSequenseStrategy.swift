@@ -26,7 +26,7 @@ final class RandomQuestionSequenceStrategy: QuestionSequenceStrategy {
     
     func makeQuestions() -> [Question] {
         var questionArr = [Question]()
-        for i in questions {
+        for _ in questions {
         let indexR = questions.indices.randomElement()
         let pickQuestion = Question(question: questions[indexR ?? 0].question, answers: questions[indexR ?? 0].answers, correctAnswer: questions[indexR ?? 0].correctAnswer)
             questionArr.append(pickQuestion)
