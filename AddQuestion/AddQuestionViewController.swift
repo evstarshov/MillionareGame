@@ -33,6 +33,20 @@ class AddQuestionViewController: UIViewController {
     }
     
     
+    @IBAction func appendQuestion() {
+        print("Appending new question to array")
+        if isValid() == false {
+            takeQuestion()
+            questionTaker.save(questions: questionArray)
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "LaunchScreen") as! LaunchScreenViewController
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        } else {
+            showAlertTextEmpty()
+        }
+    }
+    
+    
     private func takeQuestion() {
         question = questionTextBox.text!
         answer1 = answer1TextBox.text!
@@ -47,13 +61,12 @@ class AddQuestionViewController: UIViewController {
         answers.append(answer4)
         let questionToadd = [Question(question: question, answers: answers, correctAnswer: Int(correctAnswer))]
         questionTaker.save(questions: questionToadd)
+        questionArray = questionToadd
     }
 
     private func isValid() -> Bool {
-        if questionTextBox.text == "" && answer1TextBox.text == "" && answer2TextBox.text == "" && answer3TextBox.text == "" && answer4TextBox.text == ""
+        if questionTextBox.text == "" || answer1TextBox.text == "" || answer2TextBox.text == "" || answer3TextBox.text == "" || answer4TextBox.text == ""
              {
-            return true
-        } else if questionTextBox.text?.count ?? 0 > 100 {
             return true
         } else {
             return false

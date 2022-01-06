@@ -615,6 +615,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Добавить">
                                     <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="appendQuestion" destination="tII-cI-TMk" eventType="touchUpInside" id="tXf-dI-AoX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pqi-Qw-jmy"/>
@@ -631,9 +634,9 @@
                         <outlet property="answer2TextBox" destination="oiL-OL-BG6" id="6FS-aW-2iQ"/>
                         <outlet property="answer3TextBox" destination="l6X-lI-L2s" id="ZaL-AF-LOU"/>
                         <outlet property="answer4TextBox" destination="WJQ-HH-Mz1" id="odt-fN-ZNA"/>
+                        <outlet property="answerSelector" destination="Iu3-iX-9gP" id="fYV-aM-R2N"/>
                         <outlet property="confirmButton" destination="mkd-gn-bl5" id="ldf-dK-nSz"/>
                         <outlet property="questionTextBox" destination="i9Y-4U-LwZ" id="X8I-lb-hHQ"/>
-                        <outlet property="takeAnswer" destination="Iu3-iX-9gP" id="nOj-BN-AY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DSq-fJ-fTb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
