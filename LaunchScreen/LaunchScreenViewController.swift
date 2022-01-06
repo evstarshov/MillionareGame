@@ -68,7 +68,7 @@ class LaunchScreenViewController: UIViewController {
     @IBAction func gotoAddQuestion() {
         print("Openning AddQuestionVC")
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddQuestionID") as! AddQuestionViewController
-        vc.modalPresentationStyle = .automatic
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
 
