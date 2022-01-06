@@ -74,6 +74,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Добавить вопросы">
                                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="gotoAddQuestion" destination="BYZ-38-t0r" eventType="touchUpInside" id="xLd-mg-LW4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -90,6 +93,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addQuestionButton" destination="km4-mN-z6V" id="H3v-1F-TmA"/>
                         <outlet property="gotoSettingsButton" destination="3uT-hr-nUB" id="Y7A-oi-jJ2"/>
                         <outlet property="nameTextField" destination="mpe-pC-xMB" id="KjK-Mu-MhA"/>
                         <outlet property="newGameButton" destination="2D2-KW-gNy" id="flD-em-wHJ"/>

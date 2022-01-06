@@ -13,6 +13,7 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var resultsButton: UIButton!
     @IBOutlet weak var gotoSettingsButton: UIButton!
+    @IBOutlet weak var addQuestionButton: UIButton!
     
     
     override func viewDidLoad() {
@@ -64,6 +65,12 @@ class LaunchScreenViewController: UIViewController {
         self.present(vc, animated: true)
     }
     
+    @IBAction func gotoAddQuestion() {
+        print("Openning AddQuestionVC")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddQuestionID") as! AddQuestionViewController
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true)
+    }
 
     
     private func showAlertNameEmpty() {
