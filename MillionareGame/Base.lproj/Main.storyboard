@@ -598,12 +598,21 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkd-gn-bl5">
+                                <rect key="frame" x="163" y="629" width="88.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Добавить">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Pqi-Qw-jmy"/>
                         <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
+                            <constraint firstItem="mkd-gn-bl5" firstAttribute="centerX" secondItem="R6M-r5-Mem" secondAttribute="centerX" id="STB-Ek-BZ2"/>
                             <constraint firstItem="3hB-O6-7pZ" firstAttribute="centerX" secondItem="R6M-r5-Mem" secondAttribute="centerX" id="Txi-v3-kzE"/>
                             <constraint firstItem="3hB-O6-7pZ" firstAttribute="centerY" secondItem="R6M-r5-Mem" secondAttribute="centerY" id="pNj-Y6-adL"/>
+                            <constraint firstItem="mkd-gn-bl5" firstAttribute="top" secondItem="3hB-O6-7pZ" secondAttribute="bottom" constant="8" symbolic="YES" id="r3N-Sv-d6d"/>
                         </constraints>
                     </view>
                     <connections>
@@ -611,6 +620,7 @@
                         <outlet property="answer2TextBox" destination="oiL-OL-BG6" id="6FS-aW-2iQ"/>
                         <outlet property="answer3TextBox" destination="l6X-lI-L2s" id="ZaL-AF-LOU"/>
                         <outlet property="answer4TextBox" destination="WJQ-HH-Mz1" id="odt-fN-ZNA"/>
+                        <outlet property="confirmButton" destination="mkd-gn-bl5" id="ldf-dK-nSz"/>
                         <outlet property="correctAnswerTextBox" destination="sjN-Cj-6Xs" id="Rxg-6z-M3E"/>
                         <outlet property="questionTextBox" destination="i9Y-4U-LwZ" id="X8I-lb-hHQ"/>
                     </connections>
