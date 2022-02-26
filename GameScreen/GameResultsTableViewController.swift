@@ -15,6 +15,7 @@ class GameResultsTableViewController: UITableViewController {
     @IBOutlet var tableViewHeader: TableHeader!
     
     let recordTaker = RecordsCaretaker()
+    let numberFormatter = NumberFormatter()
     
     private var records: [Record] = []
 
@@ -42,14 +43,14 @@ class GameResultsTableViewController: UITableViewController {
         exitButton.backgroundColor = .systemOrange
         exitButton.setTitle("Выход", for: .normal)
         exitButton.setTitleColor(.white, for: .normal)
-        //exitButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        exitButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
     }
     
     private func configureClearButton() {
         clearButton.backgroundColor = .darkGray
         clearButton.setTitle("Очистить таблицу", for: .normal)
         clearButton.setTitleColor(.white, for: .normal)
-        //clearButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
+        clearButton.adjustsImageSizeForAccessibilityContentSizeCategory = true
     }
     
     @IBAction func exitToLaunchScreen () {
@@ -77,8 +78,10 @@ class GameResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "recordCell", for: indexPath)
                 let record = records[indexPath.row]
+        let value = record.playerPercentage
+        let formated = numberFormatter.string(from: NSNumber(value: value))
         cell.backgroundColor = .black
-        cell.textLabel?.text = "Игрок: " + record.playerName + "   " + "ответил вопросов: " + "\(record.playerScore)"
+        cell.textLabel?.text = "Игрок: " + record.playerName + " " + "ответил \(formated ?? "0")% вопросов"
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.textColor = .systemOrange
         return cell

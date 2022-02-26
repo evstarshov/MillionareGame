@@ -12,6 +12,9 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var resultsButton: UIButton!
+    @IBOutlet weak var gotoSettingsButton: UIButton!
+    @IBOutlet weak var addQuestionButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +43,7 @@ class LaunchScreenViewController: UIViewController {
             Player.shared.name = name
             print("game started by player \(Player.shared.name ?? "")")
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameViewControllerID") as! GameViewController
+            vc.sequence = Game.sequence
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         } else {
@@ -53,6 +57,21 @@ class LaunchScreenViewController: UIViewController {
         vc.modalPresentationStyle = .automatic
         self.present(vc, animated: true)
     }
+    
+    @IBAction func gotoSettings() {
+        print("Openning settings")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsID") as! SettingsViewController
+        vc.modalPresentationStyle = .automatic
+        self.present(vc, animated: true)
+    }
+    
+    @IBAction func gotoAddQuestion() {
+        print("Openning AddQuestionVC")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddQuestionID") as! AddQuestionViewController
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
+
     
     private func showAlertNameEmpty() {
             let alertController = UIAlertController(
@@ -99,5 +118,8 @@ class LaunchScreenViewController: UIViewController {
             return false
         }
     }
+    
+
+    
 
 }

@@ -11,6 +11,7 @@ import Foundation
 struct Record: Codable {
     let playerName: String
     let playerScore: Int
+    let playerPercentage: Float
 }
 
 typealias Memento = Data

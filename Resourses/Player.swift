@@ -12,6 +12,7 @@ class Player {
     static let shared = Player()
     var name: String?
     var score: Int?
+    var percent: Float?
     private init() {
     }
 }

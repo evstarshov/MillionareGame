@@ -12,7 +12,9 @@ class GameOverViewController: UIViewController {
     @IBOutlet weak var gameOverLabel: UILabel!
     @IBOutlet weak var returnToBeginBTN: NSLayoutConstraint!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var percentLabel: UILabel!
     
+    let numberFormatter = NumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +39,10 @@ class GameOverViewController: UIViewController {
         print("Setting score for player \(String(describing: Player.shared.name ?? "error"))")
         scoreLabel.text = String(Player.shared.score ?? 0)
         gameOverLabel.text = "ИГРА ОКОНЧЕНА, \(String(describing: Player.shared.name ?? ""))"
+        
+        let value = Player.shared.percent ?? 0
+        let formated = numberFormatter.string(from: NSNumber(value: value))
+        percentLabel.text = (formated ?? "0") + "%"
     }
 
 

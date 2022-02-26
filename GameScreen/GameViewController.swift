@@ -14,51 +14,76 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4Button: UIButton!
+    @IBOutlet weak var questionCounterLabel: UILabel!
+    @IBOutlet weak var questionPercentageLabel: UILabel!
     
+
+    
+    var sequence: QuestionSequence = .random
+    
+    private var createQuestionsStrategy: QuestionSequenceStrategy {
+        switch self.sequence {
+        case .random:
+            return RandomQuestionSequenceStrategy()
+        case .sequentally:
+            return SequentQuestionSequenceStrategy()
+        }
+        
+    }
+    
+    
+    let numberFormatter = NumberFormatter()
     var questions = [Question]()
-    var questionNumber = Int()
+    var questionNumber = 0
     var answerNumber = Int()
     var answeredQuestions: Int = 0
+    var percent: Float = 0
+    var allQuestions: Int = 0
     var pickedQuestion = Question()
-    var pickedQuestionIndex: Int = 0
     private let recordsTaker = RecordsCaretaker()
     private var recordsArray: [Record] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        questions = [
-            Question(question: "Из какого фильма Прекрасный принц?", answers: ["Золушка","Русалочка","Спящая Красавица","Мулан"], correctAnswer: 1),
-            Question(question: "Из какой страны родом Джастин Бибер?", answers: ["Канада","США","Франция","Англия"], correctAnswer: 1),
-            Question(question: "В сиквеле какого праздничного фильма снялся Дональд Трамп?", answers: ["Один Дома","Один дома 2","Ричи Рич","Маленькие негодяи"], correctAnswer: 2),
-            Question(question: "Какой герой мультфильма живет в ананасе под водой?", answers: ["Камбала","Немо","Рик и Морти","Губка Боб"], correctAnswer: 4),
-            Question(question: "Что является национальным животным Шотландии?", answers: ["Лошадь","Единорог","Волк","Корова"], correctAnswer: 2),
-            Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
-        ]
-        pickQuestion()
+        makeQuestions()
         makeButtons()
     }
     
 
-    
+    fileprivate func makeQuestions() {
+        questions = self.createQuestionsStrategy.makeQuestions()
+        allQuestions = questions.count
+        pickQuestion()
+    }
     
     private func pickQuestion() {
-        
-        if let index = questions.indices.randomElement() {
-            let pickQuestion = questions[index]
-            let answer1 = pickQuestion.answers[0]
-            let answer2 = pickQuestion.answers[1]
-            let answer3 = pickQuestion.answers[2]
-            let answer4 = pickQuestion.answers[3]
-            questionLabel.text = pickQuestion.question
+
+            
+        let pickQuestion = questions.first
+        let answer1 = pickQuestion?.answers[0]
+            let answer2 = pickQuestion?.answers[1]
+            let answer3 = pickQuestion?.answers[2]
+            let answer4 = pickQuestion?.answers[3]
+            questionLabel.text = pickQuestion?.question
             answer1Button.setTitle(answer1, for: .normal)
             answer2Button.setTitle(answer2, for: .normal)
             answer3Button.setTitle(answer3, for: .normal)
             answer4Button.setTitle(answer4, for: .normal)
-            pickedQuestion = pickQuestion
-            pickedQuestionIndex = index
-        }
+        pickedQuestion = pickQuestion ?? Question(question: "В каком известном романе фигурировали Джо, Мег, Бет и Эми Марч?", answers: ["Убить пересмешника","Том Сойер","Маленькие женщины","Моби Дик"], correctAnswer: 3)
+        questionNumber += 1
+        questionCounterLabel.text = "Вопрос №\(questionNumber)"
+        percent = percentage()
+        let a = numberFormatter.string(from: NSNumber(value: percent))
+        questionPercentageLabel.text = "Отвечено: \(a ?? "")%"
     }
     
+    private func percentage() -> Float {
+        let question = Float(answeredQuestions)
+        let allquestions = Float(allQuestions)
+        let x = (question / allquestions) * 100
+        return x
+    }
+
     private func makeButtons() {
         print("Configuring Buttons")
         answer1Button.backgroundColor = .darkGray
@@ -106,7 +131,7 @@ class GameViewController: UIViewController {
     private func isAnswerCorrect() -> Bool {
         if pickedQuestion.correctAnswer == answerNumber {
             print("Correct!")
-            questions.remove(at: pickedQuestionIndex)
+            questions.remove(at: 0)
             answeredQuestions += 1
             print("Answered qustions = \(answeredQuestions)")
             gameFinal()
@@ -115,7 +140,8 @@ class GameViewController: UIViewController {
         } else {
             print("Game over by player \(Player.shared.name ?? "")")
             Player.shared.score = answeredQuestions
-            let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+            Player.shared.percent = percent
+            let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0, playerPercentage: Player.shared.percent ?? 0)
             Game.shared.addRecord(record)
             recordsArray = Game.shared.records
             recordsTaker.save(records: recordsArray)
@@ -129,11 +155,13 @@ class GameViewController: UIViewController {
     private func gameFinal() {
         guard questions.count == 0 else { return }
         Player.shared.score = answeredQuestions
-        let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0)
+        Player.shared.percent = 100
+        let record = Record(playerName: Player.shared.name ?? "name error", playerScore: Player.shared.score ?? 0, playerPercentage: Player.shared.percent ?? 0)
         Game.shared.addRecord(record)
         recordsArray = Game.shared.records
         recordsTaker.save(records: recordsArray)
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "GameFinalID") as! GameFinalViewController
+        vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
     }
 }
